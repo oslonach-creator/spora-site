@@ -4,30 +4,152 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spora</title>
-<meta name="description" content="A calm record book for mushroom growers: batches, plates, harvests and labels, on your phone.">
+<meta name="description" content="Spora is the record book for a small mushroom farm. Cultures, batches, harvests, orders and QR labels on your phone, working offline in the grow room. Free early access for Android.">
+<link rel="canonical" href="https://getspora.app/">
+<meta property="og:title" content="Spora">
+<meta property="og:description" content="The record book for a small mushroom farm. Free early access for Android.">
+<meta property="og:image" content="https://getspora.app/img/farm-lions-mane.webp">
+<meta property="og:url" content="https://getspora.app/">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="landing.css">
 </head>
-<body>
+<body class="landing">
 <div class="wrap">
 <header>
   <a class="brand" href="index.html"><img src="logo.png" alt=""><span>Spora</span></a>
   <nav>
+    <a href="#what">What it does</a>
+    <a href="#android">Android</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>The record book for a small mushroom farm.</h1>
+    <p class="lede">Cultures, batches, harvests and orders, on your phone. It works offline in the grow room and tells you what needs you today.</p>
+    <div class="actions">
+      <a class="btn" href="#android">Get early access</a>
+      <span class="soon">iPhone: coming soon</span>
+    </div>
+    <p class="fine">Free while in early access. No ads, no tracking.</p>
+  </div>
+  <figure class="phone hero-phone">
+    <img src="img/screen-home.webp" width="720" height="1560" alt="The Spora home screen: the next task, batches that are growing, and today's delivery to a restaurant." fetchpriority="high">
+  </figure>
+</section>
+
+<section id="what" class="features">
+  <h2>What it does</h2>
+  <p class="intro">Six screens from the app, with sample farm data. Every one of them is something we do on our own farm each week.</p>
+
+  <div class="feature-grid">
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-home.webp" width="720" height="1560" alt="Home screen with the next task and today's list." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>Today, on the Home screen</h3>
+        <p>The next thing to do is at the top. Below it, what is growing and what is due today, including Friday's delivery and whether it's covered.</p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-batches.webp" width="720" height="1560" alt="Batches list grouped by stage, with jars from one batch shown as one row." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>Fifty jars, one row</h3>
+        <p>Jars and bags made from the same batch are grouped into one row you can open. A full shelf stays readable, and the search finds a code or a strain.</p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-batch.webp" width="720" height="1560" alt="A batch page for Lion's Mane grain spawn with its coverage photo and a Log coverage button." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>A photo of growth as it happens</h3>
+        <p>Log how far the mycelium has spread, and the picture follows in 5 percent steps. Health, next check and expected ready date sit on the same page.</p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-plan.webp" width="720" height="1560" alt="The Plan tab showing one week with tasks on each day." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>The week, laid out</h3>
+        <p>What has to be inoculated, moved, checked or harvested, and on which day. Running plans keep each species on its own routine.</p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-labels.webp" width="720" height="1560" alt="Label settings with a 30 by 20 mm QR label preview." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>Labels that scan back</h3>
+        <p>Print QR labels on a Phomemo Bluetooth printer, down to 30 by 20 mm, or export a PDF for any printer. Scan a label to open the item and act on it.</p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <figure class="phone small"><img src="img/screen-orders.webp" width="720" height="1560" alt="Deliveries for the week, ordered against ready stock, with Friday's and Saturday's restaurant orders." loading="lazy"></figure>
+      <div class="feature-text">
+        <h3>Restaurant deliveries</h3>
+        <p>Orders and standing orders from your customers, against what is ready in the cold room. You see what is short before the day comes.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="farm">
+  <div class="farm-text">
+    <h2>Built on a working farm</h2>
+    <p>Spora is made by the people who run a small gourmet mushroom farm in Oslo. Lion's mane, king oyster and blue oyster go to restaurants every week, and this is the book we keep.</p>
+    <p>It keeps your records on the phone first and syncs when you are signed in. Export everything to Excel or a backup file at any time, and delete your account from inside the app.</p>
+  </div>
+  <div class="farm-photos">
+    <img class="farm-main" src="img/farm-lions-mane.webp" width="1200" height="675" alt="Lion's mane mushrooms in a cardboard tray on a kitchen scale." loading="lazy">
+    <div class="coverage">
+      <figure><img src="img/coverage-00.webp" width="600" height="600" alt="A grain bag on day one, with no mycelium yet." loading="lazy"><figcaption>Day 1</figcaption></figure>
+      <figure><img src="img/coverage-50.webp" width="600" height="600" alt="The same grain bag about half colonised." loading="lazy"><figcaption>Half way</figcaption></figure>
+      <figure><img src="img/coverage-100.webp" width="600" height="600" alt="The same grain bag fully white and ready to use." loading="lazy"><figcaption>Ready</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="android" class="download">
+  <h2>Get early access on Android</h2>
+  <p class="intro">Spora is being tested by a small group of growers before it opens on Google Play. It's free, and there's room for a few more.</p>
+  <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20early%20access">Ask for an invite</a>
+  <ol class="steps">
+    <li><b>Send a short email.</b> Use the Gmail address on your Android phone, and say a word about what you grow.</li>
+    <li><b>Get the invite.</b> You'll receive a Google Play link that installs Spora like any other app.</li>
+    <li><b>Grow as usual.</b> Add your first strain or batch, and tell us what's confusing or missing. Updates arrive through Google Play.</li>
+  </ol>
+</section>
+
+<section id="contact" class="contact">
+  <div>
+    <h2>iPhone is coming</h2>
+    <p>Send a short email and you will hear from us the day Spora is on the App Store. Nothing else, and no list you have to leave.</p>
+    <a class="btn quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone">Tell me when it's on iPhone</a>
+  </div>
+  <div>
+    <h2>Questions and ideas</h2>
+    <p>Something missing, something broken, or a feature you need for your own farm? Write to <a href="mailto:hello@getspora.app?subject=Spora">hello@getspora.app</a>. Every email gets a reply from the person who builds the app.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <nav>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="delete.html">Delete account</a>
+    <a href="mailto:hello@getspora.app">hello@getspora.app</a>
   </nav>
-</header>
-<main>
-<h1>Spora</h1>
-<p class="lede">A calm record book for mushroom growers. Cultures, batches, checks, harvests, orders and labels, on your phone, working offline in the grow room.</p>
-<p>Spora is in early access and free. It is made in Oslo by a working gourmet mushroom farm.</p>
-<p>Questions or want to try it? <a href="mailto:oslonach@gmail.com?subject=Spora">oslonach@gmail.com</a></p>
-</main>
-<footer>Spora is made in Oslo by Hubert Burton. Questions: <a href="mailto:oslonach@gmail.com">oslonach@gmail.com</a></footer>
+  <p>Made in Oslo by Hubert Burton, on a working gourmet mushroom farm.</p>
+</footer>
 </div>
 </body>
 </html>
