@@ -291,3 +291,37 @@ p{margin:0}
   .stage{height:420px}
   .phone-hero{--pw:min(200px,54vw);left:calc(96% - var(--pw))}
 }
+
+/* Genetics */
+.genetics{padding:128px 0 0}
+.genetics .row-text{padding-top:24px}
+.row-media-tall.row-media-plate{height:728px}
+.code{white-space:nowrap}
+.plates{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:420px}
+.plates figure{margin:0}
+.plates img{border-radius:14px;aspect-ratio:1;object-fit:cover;background:var(--panel)}
+.plates figcaption{margin-top:8px;font-size:13px;line-height:1.4;color:var(--ink-soft)}
+.plates figcaption i{display:block;color:var(--ink-faint);font-size:12px}
+.genetics .lab-more{margin-top:72px}
+
+/* Guides */
+.guides-media{position:relative;height:580px;border-radius:28px;background:var(--cream-deep);overflow:hidden;display:flex;justify-content:flex-end;padding:44px 44px 0}
+.guides-media .phone{--pw:300px}
+.guide-card{position:absolute;left:40px;bottom:44px;width:230px;border-radius:12px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.04),0 22px 44px -14px rgba(27,31,26,.38)}
+.farm-grid-flip .guides-media{order:2}
+@media (max-width:1000px){
+  .row-media-tall.row-media-plate{height:600px}
+  .guides-media{height:520px;padding:36px 28px 0}
+  .guides-media .phone{--pw:270px}
+  .guide-card{left:24px;width:200px}
+}
+@media (max-width:780px){
+  .genetics{padding-top:88px}
+  .genetics .row-text{padding-top:0}
+  .row-media-tall.row-media-plate{height:552px}
+  .genetics .lab-more{margin-top:48px}
+  .farm-grid-flip .guides-media{order:0}
+  .guides-media{height:440px;border-radius:22px;padding:28px 20px 0}
+  .guides-media .phone{--pw:min(230px,60vw)}
+  .guide-card{left:16px;bottom:28px;width:min(170px,44vw);border-radius:10px}
+}
