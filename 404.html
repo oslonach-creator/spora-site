@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spora</title>
+<meta name="description" content="Spora tells you what to do each day, from the first jar or kit to the last harvest.">
+<meta name="theme-color" content="#FAF5EA">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex">
+<meta property="og:site_name" content="Spora">
+<meta property="og:title" content="Grow with Spora">
+<meta property="og:description" content="A friend or your grow kit sent you here. Spora tells you what to do each day.">
+<meta property="og:image" content="https://getspora.app/og.jpg">
+<link rel="icon" href="/favicon.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Absolute: this page is served for any missing path, e.g. /i/ABCDEFGH. -->
+<link rel="stylesheet" href="/site.css">
+<style>
+  .land{min-height:100svh;display:flex;flex-direction:column}
+  .land main{flex:1;display:flex;align-items:center;padding:32px 0 48px}
+  .land .card{background:#FFFDF8;border:1px solid var(--line);border-radius:28px;padding:40px 36px;max-width:560px;min-height:0;width:100%;margin:0 auto;display:grid;gap:20px;box-shadow:0 24px 48px -28px rgba(27,31,26,.25)}
+  .land .card .lede{font-size:18px}
+  @media (max-width:520px){.land .card{padding:28px 22px;border-radius:22px}}
+  .land h1{font-size:clamp(32px,7vw,44px);line-height:1.08}
+  .land .code{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--cream-deep);border-radius:16px;padding:14px 16px}
+  .land .code b{font:500 24px var(--serif);letter-spacing:.04em;color:var(--green);white-space:nowrap}
+  .land .code button{border:0;font-family:inherit;cursor:pointer;flex:none}
+  .land .actions .btn{flex:1 1 auto}
+  .land [hidden]{display:none!important}
+</style>
+</head>
+<body class="land">
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="/" aria-label="Spora home"><img src="/logo.png" width="28" height="28" alt=""><span>Spora</span></a>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <div class="card">
+      <h1 id="title">This page does not exist.</h1>
+      <p class="lede" id="lead"><a href="/">Go to the Spora home page</a></p>
+      <div class="actions" id="actions" hidden>
+        <a class="btn" id="open" href="#">Open in Spora</a>
+        <a class="btn btn-quiet" id="store-ios" href="#" hidden>App Store</a>
+        <a class="btn btn-quiet" id="store-android" href="#" hidden>Google Play</a>
+      </div>
+      <div id="codebox" hidden>
+        <p class="fine" id="hint">Installing first? Copy the code, then paste it in Spora under “Have a code?”.</p>
+        <div class="code" style="margin-top:10px"><b id="code"></b><button class="btn btn-small btn-quiet" id="copy" type="button">Copy code</button></div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-row">
+    <nav aria-label="Legal and contact" style="margin-left:0">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:hello@getspora.app">hello@getspora.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+(function () {
+  // Store links. Fill in the App Store address once the app is live; while
+  // it is empty the App Store button stays hidden.
+  var APP_STORE_URL = '';
+  var PLAY_URL = 'https://play.google.com/store/apps/details?id=app.spora.app';
+  var ANDROID_PACKAGE = 'app.spora.app';
+
+  // Same rules as the app (src/features/referrals/codes.ts).
+  var m = location.pathname.match(/^\/([ik])\/([A-Za-z0-9_-]+)\/?$/);
+  if (!m) return;
+  var kind = m[1], raw = m[2];
+  var friend = kind === 'i' && /^[2-9A-HJKMNP-Za-hjkmnp-z]{8}$/.test(raw);
+  var team = kind === 'i' && /^[A-Za-z0-9_-]{20,64}$/.test(raw);
+  var kit = kind === 'k' && /^[A-Za-z0-9]{3,16}$/.test(raw);
+  if (!friend && !team && !kit) return;
+  var value = team ? raw : raw.toUpperCase();
+  var appPath = team ? 'invite/' + value : kind + '/' + value;
+
+  var T = {
+    en: { friend: 'A friend invited you to Spora', team: 'You are invited to a farm on Spora', kit: 'Your kit’s day-by-day guide', lead: 'Spora tells you what to do each day, from the first jar or kit to the last harvest. It is free.', open: 'Open in Spora', hint: 'Installing first? Copy the code, then paste it in Spora under “Have a code?”.', copy: 'Copy code', copied: 'Copied' },
+    nb: { friend: 'En venn har invitert deg til Spora', team: 'Du er invitert til en gård i Spora', kit: 'Dag-for-dag-guiden til settet ditt', lead: 'Spora sier hva du skal gjøre hver dag, fra første glass eller sett til siste høsting. Det er gratis.', open: 'Åpne i Spora', hint: 'Installerer du først? Kopier koden og lim den inn i Spora under «Har du en kode?».', copy: 'Kopier koden', copied: 'Kopiert' },
+    sv: { friend: 'En vän har bjudit in dig till Spora', team: 'Du är inbjuden till en odling i Spora', kit: 'Dag-för-dag-guiden till ditt kit', lead: 'Spora säger vad du ska göra varje dag, från första burken eller kitet till sista skörden. Det är gratis.', open: 'Öppna i Spora', hint: 'Installerar du först? Kopiera koden och klistra in den i Spora under ”Har du en kod?”.', copy: 'Kopiera koden', copied: 'Kopierad' },
+    da: { friend: 'En ven har inviteret dig til Spora', team: 'Du er inviteret til en gård i Spora', kit: 'Dag-for-dag-guiden til dit sæt', lead: 'Spora fortæller, hvad du skal gøre hver dag, fra første glas eller sæt til sidste høst. Det er gratis.', open: 'Åbn i Spora', hint: 'Installerer du først? Kopiér koden, og indsæt den i Spora under »Har du en kode?«.', copy: 'Kopiér koden', copied: 'Kopieret' },
+    de: { friend: 'Ein Freund hat dich zu Spora eingeladen', team: 'Du bist zu einer Farm in Spora eingeladen', kit: 'Die Anleitung zu deinem Set, Tag für Tag', lead: 'Spora sagt dir jeden Tag, was zu tun ist, vom ersten Glas oder Set bis zur letzten Ernte. Kostenlos.', open: 'In Spora öffnen', hint: 'Erst installieren? Kopiere den Code und füge ihn in Spora unter „Hast du einen Code?“ ein.', copy: 'Code kopieren', copied: 'Kopiert' },
+    es: { friend: 'Un amigo te ha invitado a Spora', team: 'Te han invitado a una granja en Spora', kit: 'La guía día a día de tu kit', lead: 'Spora te dice qué hacer cada día, del primer frasco o kit a la última cosecha. Es gratis.', open: 'Abrir en Spora', hint: '¿Vas a instalarla primero? Copia el código y pégalo en Spora en «¿Tienes un código?».', copy: 'Copiar código', copied: 'Copiado' },
+    fr: { friend: 'Un ami t’invite sur Spora', team: 'Tu es invité dans une ferme sur Spora', kit: 'Le guide jour par jour de ton kit', lead: 'Spora te dit quoi faire chaque jour, du premier bocal ou kit à la dernière récolte. C’est gratuit.', open: 'Ouvrir dans Spora', hint: 'Tu installes d’abord ? Copie le code, puis colle-le dans Spora sous « Tu as un code ? ».', copy: 'Copier le code', copied: 'Copié' },
+    it: { friend: 'Un amico ti ha invitato su Spora', team: 'Sei invitato in una coltivazione su Spora', kit: 'La guida giorno per giorno del tuo kit', lead: 'Spora ti dice cosa fare ogni giorno, dal primo barattolo o kit all’ultimo raccolto. È gratis.', open: 'Apri in Spora', hint: 'Installi prima l’app? Copia il codice e incollalo in Spora sotto «Hai un codice?».', copy: 'Copia il codice', copied: 'Copiato' },
+    pl: { friend: 'Znajomy zaprasza cię do Spora', team: 'Zaproszenie do gospodarstwa w Spora', kit: 'Poradnik do zestawu, dzień po dniu', lead: 'Spora codziennie podpowie, co robić, od pierwszego słoika lub zestawu po ostatni zbiór. Za darmo.', open: 'Otwórz w Spora', hint: 'Najpierw instalacja? Skopiuj kod i wklej go w Spora w „Masz kod?”.', copy: 'Kopiuj kod', copied: 'Skopiowano' },
+    ru: { friend: 'Друг приглашает вас в Spora', team: 'Вас пригласили на ферму в Spora', kit: 'Пошаговое руководство к вашему набору', lead: 'Spora каждый день подскажет, что делать, от первой банки или набора до последнего урожая. Бесплатно.', open: 'Открыть в Spora', hint: 'Сначала установка? Скопируйте код и вставьте его в Spora в разделе «Есть код?».', copy: 'Копировать код', copied: 'Скопировано' }
+  };
+  var langs = (navigator.languages || [navigator.language || 'en']).map(function (l) { return String(l).toLowerCase().slice(0, 2); });
+  var lang = langs.map(function (l) { return l === 'no' || l === 'nn' ? 'nb' : l; }).filter(function (l) { return T[l]; })[0] || 'en';
+  var t = T[lang];
+  document.documentElement.lang = lang;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var title = friend ? t.friend : team ? t.team : t.kit;
+  document.title = title;
+  $('title').textContent = title;
+  $('lead').textContent = t.lead;
+  $('actions').hidden = false;
+
+  var ua = navigator.userAgent;
+  var android = /Android/i.test(ua);
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  // The referrer rides along to Play, for the Install Referrer API later.
+  var play = PLAY_URL + '&referrer=' + encodeURIComponent('spora=' + appPath);
+  var open = $('open');
+  open.textContent = t.open;
+  // Android: one link that opens the app, or Play when it is not installed.
+  open.href = android
+    ? 'intent://' + appPath + '#Intent;scheme=spora;package=' + ANDROID_PACKAGE + ';S.browser_fallback_url=' + encodeURIComponent(play) + ';end'
+    : 'spora://' + appPath;
+  if (!ios) { $('store-android').href = play; $('store-android').hidden = false; }
+  if (!android && APP_STORE_URL) { $('store-ios').href = APP_STORE_URL; $('store-ios').hidden = false; }
+
+  // A team invite's token is long and private: only the link carries it.
+  if (!team) {
+    $('codebox').hidden = false;
+    $('hint').textContent = t.hint;
+    $('code').textContent = friend ? value.slice(0, 4) + '-' + value.slice(4) : value;
+    var copy = $('copy');
+    copy.textContent = t.copy;
+    copy.addEventListener('click', function () {
+      var done = function () { copy.textContent = t.copied; };
+      if (navigator.clipboard) navigator.clipboard.writeText(value).then(done, function () {});
+    });
+  }
+})();
+</script>
+</body>
+</html>

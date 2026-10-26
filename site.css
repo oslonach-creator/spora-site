@@ -124,6 +124,47 @@ p{margin:0}
 .species span{display:block;margin-top:12px;font-family:var(--serif);font-size:19px;font-variation-settings:"opsz" 24}
 .species i{display:block;margin-top:2px;font-size:15px;color:var(--ink-soft);font-style:italic}
 
+
+/* Who it's for */
+.who{padding:128px 0 0}
+.who-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.who-list img{width:100%;border-radius:22px;aspect-ratio:1;object-fit:cover;background:var(--panel)}
+.who-list h3{font-size:clamp(22px,2vw,26px);margin-top:22px}
+.who-list p{margin-top:10px;color:var(--ink-soft);font-size:15.5px;max-width:30em}
+
+/* Feature extras */
+.row-text .row-aside{margin-top:22px;padding:16px 18px;border-radius:16px;background:var(--cream-deep);font-size:15px;color:var(--ink-soft)}
+.row-after-pair{margin-top:104px}
+
+/* Farm with deliveries */
+.farm-sec{padding:136px 0 0}
+.farm-sec .row{margin-bottom:0}
+.farm-sec .row-text{padding-top:8px}
+.farm-sec .row-text > p{margin-top:20px;font-size:18px}
+.farm-list{margin:32px 0 0;display:grid;gap:0}
+.farm-list div{padding:16px 0;border-top:1px solid var(--line)}
+.farm-list div:last-child{border-bottom:1px solid var(--line)}
+.farm-list dt{font-weight:600;font-size:16px}
+.farm-list dd{margin:4px 0 0;color:var(--ink-soft);font-size:15px;max-width:34em}
+.row-media-tall{height:640px;position:sticky;top:96px}
+.team{margin-top:96px;padding:48px 48px 52px;border-radius:28px;background:var(--cream-deep)}
+.team-head p{margin-top:10px;color:var(--ink-soft);font-size:17px}
+.team .lab-more{margin-top:36px}
+.team .lab-more div{border-top-color:rgba(27,31,26,.14)}
+
+/* Beginner */
+.beginner{padding:136px 0 0}
+.farm-grid-flip{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.farm-grid-flip .farm-photo{order:2}
+
+/* Data */
+.data{padding:136px 0 0}
+.where{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.where li{background:#FFFDF8;border:1px solid var(--line);border-radius:22px;padding:28px 26px 30px}
+.where h3{font-size:24px}
+.where p{margin-top:10px;color:var(--ink-soft);font-size:15.5px}
+.data .lab-more{margin-top:56px}
+
 /* Access */
 .access{padding:136px 0 0}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:0 0 48px}
@@ -193,6 +234,10 @@ p{margin:0}
   .lab-list,.lab-more{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 28px}
   .farm-grid{gap:40px}
   .faq-grid{grid-template-columns:1fr;gap:28px}
+  .who-list{gap:20px}
+  .where{grid-template-columns:1fr}
+  .team{padding:36px 32px 40px}
+  .row-media-tall{height:560px}
 }
 @media (max-width:780px){
   .top-nav{display:none}
@@ -217,7 +262,8 @@ p{margin:0}
   .lab .section-head{margin-bottom:36px}
   .lab-list,.lab-more{grid-template-columns:1fr;gap:28px}
   .lab-more{margin-top:40px}
-  .farm-grid{grid-template-columns:1fr;gap:28px}
+  .farm-grid,.farm-grid-flip{grid-template-columns:1fr;gap:28px}
+  .farm-grid-flip .farm-photo{order:0}
   .farm-photo{border-radius:22px}
   .species{gap:12px;margin-top:28px}
   .species img{border-radius:14px}
@@ -226,6 +272,19 @@ p{margin:0}
   .access .actions .btn{flex:1 1 100%}
   .closing{margin-top:96px;padding:80px 0}
   .foot nav{margin-left:0}
+  .who,.farm-sec,.beginner,.data{padding-top:88px}
+  .who-list{grid-template-columns:1fr;gap:36px}
+  .who-list li{display:grid;grid-template-columns:112px minmax(0,1fr);gap:4px 18px;align-items:start}
+  .who-list img{grid-row:span 2;border-radius:16px;aspect-ratio:1}
+  .who-list h3{margin-top:0;font-size:22px}
+  .who-list p{margin-top:0;font-size:15px}
+  .row-after-pair{margin-top:72px}
+  .row-media-tall{position:static;height:440px}
+  .farm-list{margin-top:24px}
+  .team{margin-top:64px;padding:28px 22px 32px;border-radius:22px}
+  .where li{padding:22px 22px 24px;border-radius:18px}
+  .where h3{font-size:22px}
+  .data .lab-more{margin-top:40px}
 }
 @media (max-width:420px){
   .hero .actions .btn{flex:1 1 100%}
