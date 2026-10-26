@@ -3,23 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spora: mushroom grow log app for small farms</title>
-<meta name="description" content="Mushroom grow log for home growers and small farms: lineage from agar to fruiting, contamination log with photos and causes, sterilisation runs, QR labels and a weekly plan. Works offline. Free early access on Android.">
+<title>Spora: the mushroom grow log, from spore to harvest</title>
+<meta name="description" content="Spora is a grow log for mushroom growers, from a first kit to a small farm with staff. Lineage and family tree, colony and sector isolation, QR labels and scanning, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <link rel="canonical" href="https://getspora.app/">
 <meta name="theme-color" content="#FAF5EA">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spora">
-<meta property="og:title" content="Spora: mushroom grow log app for small farms">
-<meta property="og:description" content="Lineage from agar to fruiting, contamination with photos and causes, sterilisation runs, QR labels and a weekly plan. Works offline. Free early access on Android.">
+<meta property="og:title" content="Spora: the mushroom grow log, from spore to harvest">
+<meta property="og:description" content="Lineage and family tree, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <meta property="og:url" content="https://getspora.app/">
 <meta property="og:image" content="https://getspora.app/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Spora. The grow log for mushroom growers. Lion's mane on a kitchen scale.">
+<meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spora: mushroom grow log app for small farms">
-<meta name="twitter:description" content="Lineage from agar to fruiting, contamination with photos and causes, sterilisation runs, QR labels and a weekly plan. Works offline. Free early access on Android.">
+<meta name="twitter:title" content="Spora: the mushroom grow log, from spore to harvest">
+<meta name="twitter:description" content="Lineage and family tree, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <meta name="twitter:image" content="https://getspora.app/og.jpg">
 <link rel="icon" href="favicon.png" sizes="64x64" type="image/png">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -29,6 +30,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="preload" as="image" href="img/screen-home.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spora","applicationCategory":"BusinessApplication","operatingSystem":"Android","url":"https://getspora.app/","description":"A grow log for mushroom growers: lineage, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline.","inLanguage":["en","nb","sv","da","de","es","fr","it","pl","ru"]}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -49,13 +53,13 @@
   <div class="wrap top-row">
     <a class="brand" href="/" aria-label="Spora home"><img src="logo.png" width="28" height="28" alt=""><span>Spora</span></a>
     <nav class="top-nav" aria-label="Sections">
+      <a href="#who">Who it's for</a>
       <a href="#features">What it does</a>
-      <a href="#lab">For mycologists</a>
-      <a href="#farm">The farm</a>
-      <a href="#access">Early access</a>
+      <a href="#farm">For farms</a>
+      <a href="#data">Your data</a>
       <a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn-small" href="mailto:hello@getspora.app?subject=Spora%20early%20access&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Spora.%0A%0AI%20grow%3A%20%0AMy%20setup%20(tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Ask for an invite</a>
+    <a class="btn btn-small" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the test</a>
   </div>
 </header>
 
@@ -64,49 +68,89 @@
 <section class="hero">
   <div class="wrap">
     <h1>The grow log for mushroom growers.</h1>
-    <p class="lede">Every batch from agar plate to harvest, with its lineage, its contamination history and what needs doing today. Works offline in the grow room.</p>
+    <p class="lede">Every culture, jar and bag from spore to harvest, where it came from and what it needs today. For a first kit on the kitchen counter, a shelf of plates, or a small farm with staff. Works offline in the grow room.</p>
     <div class="actions">
-      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20early%20access&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Spora.%0A%0AI%20grow%3A%20%0AMy%20setup%20(tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Ask for an invite</a>
-      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone%20waitlist&body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone." title="Email us and we will tell you the day it is on the App Store">iPhone: join the waitlist</a>
+      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
+      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone&amp;body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone." title="Email us and we will tell you the day it is on the App Store">iPhone: coming soon</a>
     </div>
-    <p class="fine">Free while in early access. Android now, iPhone later. No ads.</p>
-    <p class="fine hero-mail">Or write to <span class="mail">hello@getspora.app</span></p>
+    <p class="fine">Free during early access. No ads. In English and nine more languages.</p>
   </div>
   <div class="wrap wrap-wide">
     <div class="stage">
       <img class="stage-photo" src="img/hero-lions-bag.webp" width="1280" height="720" alt="A lion's mane mushroom fruiting from a substrate bag, on a warm beige table." fetchpriority="high">
       <figure class="phone phone-hero">
         <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
-        <img src="img/screen-home.webp" width="720" height="1513" alt="The Spora home screen: the next task is to move batch LM-02 to bulk, eight batches are growing, and today's delivery of 4 kg to a restaurant is covered."></div>
+        <img src="img/screen-home.webp" width="720" height="1513" alt="The Spora home screen for the sample farm Fjord Mushrooms: the next task is to move batch LM-02 to bulk, eight batches are growing, and today's delivery of 4 kg to a restaurant is in the cold room."></div>
       </figure>
     </div>
+  </div>
+</section>
+
+<section id="who" class="who">
+  <div class="wrap">
+    <header class="section-head">
+      <h2>One log, three kinds of grower.</h2>
+      <p>Spora shows as much as you need. Pick Simple or Full when you start and switch whenever you like; nothing is lost either way.</p>
+    </header>
+    <ul class="who-list">
+      <li>
+        <img src="img/stage-fruiting.webp" width="600" height="600" alt="A grow bag with clusters of blue oyster mushrooms." loading="lazy">
+        <h3>Starting with a kit</h3>
+        <p>Add the kit in front of you and Spora counts the days, tells you when to look and what it should look like, in plain words. Six photo steps take you from opening the box to the first harvest.</p>
+      </li>
+      <li>
+        <img src="img/stage-agar.webp" width="600" height="600" alt="An agar plate with white mycelium growing out from the centre." loading="lazy">
+        <h3>Serious hobby growers</h3>
+        <p>Plates, liquid culture, grain and bulk with every parent recorded. Colonies and sectors, transfer counts, contamination with the cause, and the numbers to compare strains and recipes.</p>
+      </li>
+      <li>
+        <img src="img/farm-shelves.webp" width="640" height="794" alt="A metal rack holding three shelves of substrate bags." loading="lazy">
+        <h3>Small farms with staff</h3>
+        <p>Labels and a scanner on every shelf, harvests weighed by the crate, weekly restaurant orders, invoices and a recall report. Everyone on the team sees their own day.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
 <section id="features" class="features">
   <div class="wrap">
     <header class="section-head">
-      <h2>From agar plate to restaurant crate.</h2>
-      <p>Agar, liquid culture, grain, bulk and fruiting. Every batch keeps its lineage and generation, even spawn pooled from several parents. Six screens from the app, shown with a sample farm.</p>
+      <h2>From spore to restaurant crate.</h2>
+      <p>Agar, liquid culture, grain, bulk and fruiting, in one record that follows the work. The screens below are from the app, shown with a sample farm.</p>
     </header>
 
     <article class="row">
       <div class="row-text">
-        <h3>Fifty jars, one row.</h3>
-        <p>Jars and bags from the same batch sit together in a row you can open. A full shelf stays readable, and search finds a code or a strain in a second.</p>
+        <h3>Every batch, back to its source.</h3>
+        <p>Each plate, syringe, jar and block gets a permanent code and remembers what it was made from, even when spawn is pooled from several parents. The family tree shows the whole line, and the way back to where it began.</p>
+        <p>When something goes wrong, Spora flags what was made from the same parent. Quarantined material is held, so it cannot be used by mistake.</p>
       </div>
       <div class="row-media panel">
         <figure class="phone">
-          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
-          <img src="img/screen-batches.webp" width="720" height="1513" alt="The Batches list, grouped by stage. Six jars of lion's mane from one batch are shown as a single row with a progress bar." loading="lazy"></div>
+          <div class="screen">
+          <img src="img/screen-family-tree.webp" width="720" height="1513" alt="A family tree from strain MYC-076 through agar plate P01 to two candidate isolates, A and D, and their transfers T1, T2 and T3." loading="lazy"></div>
         </figure>
       </div>
     </article>
 
     <article class="row row-flip">
       <div class="row-text">
+        <h3>Colonies and sectors, written down.</h3>
+        <p>Started from a spore swab or print? Mark colony A, B and C on the plate with what you saw, and take a daughter culture from the one you want. It becomes a candidate isolate with its own branch: MYC-076-A, then A-T1, A-T2 for each agar transfer.</p>
+        <p class="row-aside">Careful by design: a sector is a place on a plate, not proof of a new genotype. Transfers count as T, and the F-generation is never raised by a routine transfer.</p>
+      </div>
+      <div class="row-media panel">
+        <figure class="phone">
+          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
+          <img src="img/screen-plate.webp" width="720" height="1513" alt="An agar plate record with four marked regions: colonies A and B transferred, colony C and sector D under observation, and a Create daughter culture button." loading="lazy"></div>
+        </figure>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="row-text">
         <h3>Colonisation, logged.</h3>
-        <p>Log how far the mycelium has spread and the picture follows, step by step. Health, the next check and the expected ready date sit on the same page, so one glance tells you where a batch stands.</p>
+        <p>Log how far the mycelium has spread and the picture follows, step by step. Health, the next check and the expected ready date sit on the same page. Jars from one batch share a row, so a shelf of fifty stays readable.</p>
         <ul class="trio" aria-label="Coverage photos, day one to ready">
           <li><img src="img/coverage-day1.webp" width="600" height="600" alt="A grain jar on day one, no white yet." loading="lazy"><span>Day one</span></li>
           <li><img src="img/coverage-half.webp" width="600" height="600" alt="The same jar about half covered in white mycelium." loading="lazy"><span>Halfway</span></li>
@@ -121,24 +165,11 @@
       </div>
     </article>
 
-    <article class="row">
-      <div class="row-text">
-        <h3>Your week, laid out.</h3>
-        <p>What to inoculate, move, check or harvest, and on which day. Add your own tasks, get one reminder in the morning, and a busy Friday does not cost you a batch.</p>
-      </div>
-      <div class="row-media panel">
-        <figure class="phone">
-          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
-          <img src="img/screen-plan.webp" width="720" height="1513" alt="The Plan tab for week 43: a strip of days along the top and the tasks for Friday, like chop the straw and shake the grain, each with a Done button." loading="lazy"></div>
-        </figure>
-      </div>
-    </article>
-
     <div class="pair">
       <article class="card">
         <div class="card-text">
-          <h3>Labels that scan back.</h3>
-          <p>Print small QR labels on a Bluetooth label printer, or export a PDF for any printer. Scan a label and the jar opens.</p>
+          <h3>Labels from a pocket printer.</h3>
+          <p>Small QR labels on a cheap Bluetooth printer such as the Phomemo M221 or a NIIMBOT, one label or a whole tray. Any other printer gets an A4 sheet as a PDF.</p>
         </div>
         <figure class="phone phone-crop">
           <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
@@ -147,56 +178,126 @@
       </article>
       <article class="card">
         <div class="card-text">
-          <h3>Deliveries, covered.</h3>
-          <p>Orders from your restaurants, set against what is ready in the cold room. You see what is short before the day comes.</p>
-          <p class="card-aside">Selling a few boxes at a market? It works the same.</p>
+          <h3>One scan, the next step.</h3>
+          <p>Scan a label to open the jar, log a check, harvest it or print it again. Walk the day's checks with the scanner, jar after jar, and each one is logged as you go.</p>
         </div>
         <figure class="phone phone-crop">
-          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
-          <img src="img/screen-orders.webp" width="720" height="1513" alt="Deliveries for week 43: lion's mane, king oyster and blue oyster each marked covered, then Friday's and Saturday's restaurant orders." loading="lazy"></div>
+          <div class="screen">
+          <img src="img/screen-scan.webp" width="720" height="1513" alt="After scanning agar plate MYC-076-A-T2: how does it look, with Looks fine, Not sure and Contaminated, then Move, Create daughter culture, Put on hold and Print the label again." loading="lazy"></div>
         </figure>
       </article>
     </div>
+
+    <article class="row row-flip row-after-pair">
+      <div class="row-text">
+        <h3>Your week, laid out.</h3>
+        <p>What to inoculate, move, check or harvest, and on which day. The planner works back from the harvest date through agar, liquid culture, grain and bulk. Add your own tasks and get one reminder in the morning.</p>
+      </div>
+      <div class="row-media panel">
+        <figure class="phone">
+          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
+          <img src="img/screen-plan.webp" width="720" height="1513" alt="The Plan tab for week 43: a strip of days along the top and the tasks for Friday, like chop the straw and shake the grain, each with a Done button." loading="lazy"></div>
+        </figure>
+      </div>
+    </article>
   </div>
 </section>
 
 <section id="lab" class="lab">
   <div class="wrap">
     <header class="section-head">
-      <h2>Made for people who read a plate.</h2>
-      <p>The records a mycologist wants, written so a first-year grower can follow them.</p>
+      <h2>The records behind every jar.</h2>
+      <p>What a mycologist wants written down, in words a first-year grower can follow.</p>
     </header>
     <dl class="lab-list">
-      <div><dt>Lineage and generations</dt><dd>Every batch knows its parents, from the agar plate through liquid culture and grain to bulk and fruiting, as a family tree. It carries the generation (G1, G2 and on) and how many times the agar has been passaged, and warns you before you use up the last living culture of a strain.</dd></div>
-      <div><dt>Contamination, with the cause</dt><dd>Log it with a photo, the type and the likely cause. A built-in guide helps you tell cobweb from healthy mycelium, and trichoderma from bacteria or yeast, before you throw out a jar that was fine.</dd></div>
-      <div><dt>Sterilisation runs</dt><dd>Minutes at pressure, the pressure, the temperature, what went in and how many containers. Each run is linked to its batches, so a bad run is traceable to every jar that came out of it.</dd></div>
-      <div><dt>Where losses come from</dt><dd>Losses broken down by cause, by spawn source, by sterilisation run, by recipe, and by room and shelf. The pattern shows up before the season is over.</dd></div>
-      <div><dt>Yields per flush</dt><dd>Each harvest is logged per flush with its yield and biological efficiency, so strains, recipes and shelves can be compared on numbers rather than memory.</dd></div>
-      <div><dt>Shelf checks</dt><dd>Walk the shelves and mark a whole shelf as fine in one tap. You only stop at the jar that is not.</dd></div>
-    </dl>
-    <dl class="lab-more">
-      <div><dt>Works without signal</dt><dd>Every record is kept on the phone first. Basements and grow tents are fine. It syncs when you are back online.</dd></div>
-      <div><dt>Your records stay yours</dt><dd>Export everything to Excel or a full backup file whenever you like, and delete your account from inside the app.</dd></div>
-      <div><dt>What it is not</dt><dd>Spora is a grow log, not a lab LIMS: there is no freezer or cryo inventory yet. If that is what you are missing, tell us.</dd></div>
+      <div><dt>Contamination, with the cause</dt><dd>Mark a jar fine, suspect or contaminated, with a photo and the likely cause. The built-in guide helps you tell cobweb from healthy mycelium before you throw out a jar that was fine.</dd></div>
+      <div><dt>Sterilisation runs</dt><dd>Time at pressure, temperature, what went in and how many containers. Every jar points back to its run, so a bad cook shows up in the losses.</dd></div>
+      <div><dt>Where losses come from</dt><dd>Losses by cause, spawn source, sterilisation run, recipe, room and shelf, with the count behind every percentage.</dd></div>
+      <div><dt>Yields per flush</dt><dd>Each flush weighed and numbered for you, with biological efficiency, so strains and recipes are compared on numbers rather than memory.</dd></div>
+      <div><dt>Culture bank</dt><dd>Slants, master plates and liquid culture: where each one is, when to check it, and a warning before you use up the last living culture of a strain.</dd></div>
+      <div><dt>Supplies and recipes</dt><dd>Grain, bags and supplement with days left and what to buy soon. Recipes carry their cost, so every batch has one.</dd></div>
     </dl>
   </div>
 </section>
 
-<section id="farm" class="farm">
+<section id="farm" class="farm-sec">
+  <div class="wrap">
+    <article class="row">
+      <div class="row-text">
+        <h2>For farms that deliver every week.</h2>
+        <p>Your restaurants and what each orders every week, set against what is ready in the cold room. Two weeks of deliveries, packed oldest first, so you see what is short before the day comes.</p>
+        <dl class="farm-list">
+          <div><dt>Harvest by scan or from the list</dt><dd>Scan the label and weigh, or pick the batch from a list when the code is written on the jar. A harvest session weighs a whole room on a big number pad.</dd></div>
+          <div><dt>Cold room and stock</dt><dd>Picked lots, oldest first, with days left. Deliveries take from it and the ledger keeps up.</dd></div>
+          <div><dt>Cost per kilo</dt><dd>Materials, energy and labour per batch, rolled up into the cost per kilo by strain and recipe.</dd></div>
+          <div><dt>Invoices and delivery notes</dt><dd>Bill a restaurant for what went out, VAT per line, as a PDF, and mark it paid. Export the sales for your accounts.</dd></div>
+          <div><dt>Recall report</dt><dd>For any delivery or batch: where it came from, any problems on the way, and every customer it went to. PDF or CSV.</dd></div>
+        </dl>
+      </div>
+      <div class="row-media panel row-media-tall">
+        <figure class="phone">
+          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
+          <img src="img/screen-orders.webp" width="720" height="1513" alt="Deliveries for week 43: lion's mane, king oyster and blue oyster each marked covered, then Friday's and Saturday's restaurant orders." loading="lazy"></div>
+        </figure>
+      </div>
+    </article>
+
+    <div class="team">
+      <header class="team-head">
+        <h3>A team on one log.</h3>
+        <p>Add the people who work with you. The log stays one, on every phone.</p>
+      </header>
+      <dl class="lab-more">
+        <div><dt>Roles</dt><dd>Owner, manager, grower, packer or viewer. People change what their role allows, and nothing more.</dd></div>
+        <div><dt>My day</dt><dd>Each person opens their own list for today: the jobs given to them and their shift, ticked off where they stand.</dd></div>
+        <div><dt>Who did what</dt><dd>A name on every log line, check and harvest, and corrections added on top, never written over.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="beginner">
+  <div class="wrap">
+    <div class="farm-grid farm-grid-flip">
+      <img class="farm-photo" src="img/hero-king-bag.webp" width="1280" height="720" alt="King oyster mushrooms pinning from a substrate bag with a blank label." loading="lazy">
+      <div class="farm-text">
+        <h2>Starting with one kit?</h2>
+        <p>Choose Simple when you start. You get what to do today, your grows in plain words such as Growing well or Ready to pick, and three big buttons on each one.</p>
+        <p>Short guides cover fruiting conditions, grain jars, inoculation, pouring agar and the monotub. The contamination guide shows what trouble looks like, why it happens and what to do. Add more when you are ready; Full mode is one switch away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="data" class="data">
+  <div class="wrap">
+    <header class="section-head">
+      <h2>Your records, kept where you choose.</h2>
+      <p>Spora keeps everything on the phone first, so it works in a basement with no signal. Then you decide what leaves the phone.</p>
+    </header>
+    <ul class="where">
+      <li><h3>Only on this phone</h3><p>Nothing is sent anywhere, even when you are signed in. A weekly reminder helps you save a backup to Files or Drive.</p></li>
+      <li><h3>Phone and cloud</h3><p>Records sync between your phones and your team, stored in the EU. Strains and lineage can stay on the phone if you prefer.</p></li>
+      <li><h3>Encrypted cloud backup</h3><p>Once a day the phone locks a full backup with your passphrase before it uploads. Without your passphrase or recovery key, nobody can open it, us included.</p></li>
+    </ul>
+    <dl class="lab-more">
+      <div><dt>Export to Excel, always free</dt><dd>Every table, whenever you like, plus a full backup file you can restore. Delete your account from inside the app.</dd></div>
+      <div><dt>Ten languages</dt><dd>English, Norsk, Svenska, Dansk, Deutsch, Español, Français, Italiano, Polski and Русский. Spora follows your phone, or pick one on the first screen.</dd></div>
+      <div><dt>No ads, nothing sold</dt><dd>No advertising and no data brokers. Anonymous usage data and crash reports help us fix problems, and one switch turns them off.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="about" class="farm">
   <div class="wrap">
     <div class="farm-grid">
       <img class="farm-photo" src="img/farm-blue-fruiting.webp" width="1280" height="720" alt="A bag of blue oyster mushrooms fruiting in window light." loading="lazy">
       <div class="farm-text">
-        <h2>Built on a working mushroom farm.</h2>
-        <p>Spora is made by the people who run a small gourmet mushroom farm in Oslo. Lion's mane, king oyster and blue oyster go out to restaurants every week, and this is the log we keep.</p>
-        <p>Every screen is something we do ourselves: the Monday inoculation, the Thursday check, the Friday delivery. When a jar turns green, we log it and the cause. When a chef calls, we look at the cold room on the phone.</p>
+        <h2>Built by a grower in Oslo.</h2>
+        <p>Spora is made by a mushroom grower who outgrew paper, binders and spreadsheets.</p>
+        <p>Every feature starts with a real job at the shelf: the Monday inoculation, the Thursday check, the Friday delivery. The farm in the screenshots, Fjord Mushrooms, is a sample made up to show the app.</p>
       </div>
     </div>
-    <ul class="species" aria-label="What we grow">
-      <li><img src="img/species-lions-mane.webp" width="576" height="720" alt="Lion's mane, a white shaggy mushroom, in a tray on a scale." loading="lazy"><span>Lion's mane <i>Hericium erinaceus</i></span></li>
-      <li><img src="img/species-king-oyster.webp" width="576" height="720" alt="King oyster mushrooms with thick white stems in a tray on a scale." loading="lazy"><span>King oyster <i>Pleurotus eryngii</i></span></li>
-      <li><img src="img/species-blue-oyster.webp" width="576" height="720" alt="A cluster of blue oyster mushrooms in a tray on a scale." loading="lazy"><span>Blue oyster <i>Pleurotus ostreatus, blue strain</i></span></li>
-    </ul>
   </div>
 </section>
 
@@ -204,18 +305,18 @@
   <div class="wrap">
     <header class="section-head">
       <h2>Try it while it's new.</h2>
-      <p>A small group of growers is using Spora before it opens on Google Play. It's free while we test, from a shelf of jars to a full grow room.</p>
+      <p>Spora is in early access on Android, as a closed test on Google Play. It's free while we test, from one kit to a full grow room. iPhone is coming soon.</p>
     </header>
     <dl class="steps">
-      <div><dt>Write to us</dt><dd>Send a short email: tell us what you grow and the Gmail on your Android phone.</dd></div>
-      <div><dt>Get the invite</dt><dd>You receive a Google Play link that installs Spora like any other app. Updates arrive the same way.</dd></div>
-      <div><dt>Grow as usual</dt><dd>Add your first strain or batch and keep the log for a few weeks. Tell us what is confusing or missing.</dd></div>
+      <div><dt>Write to us</dt><dd>Send a short email: what you grow, and the Gmail address on your Android phone.</dd></div>
+      <div><dt>Get the link</dt><dd>We add you to the test and send a Google Play link. Spora installs like any other app, and updates arrive the same way.</dd></div>
+      <div><dt>Grow as usual</dt><dd>Add your first kit, strain or batch and keep the log for a few weeks. Help &amp; feedback in the app reaches us directly.</dd></div>
     </dl>
     <div class="actions">
-      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20early%20access&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Spora.%0A%0AI%20grow%3A%20%0AMy%20setup%20(tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Ask for an invite</a>
-      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone%20waitlist&body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone.">iPhone: join the waitlist</a>
+      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
+      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone&amp;body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone.">iPhone: tell me when it's ready</a>
     </div>
-    <p class="fine">No ads, no card, and your data is never sold. Your records are yours to export at any time. <span class="mail">hello@getspora.app</span></p>
+    <p class="fine">No ads and no card. Your records are yours to export at any time. <span class="mail">hello@getspora.app</span></p>
   </div>
 </section>
 
@@ -225,43 +326,43 @@
     <div class="faq-list">
     <details>
       <summary>Does it work offline?</summary>
-      <p>Yes. Everything is kept on the phone first, so you can log, scan and check in a basement or a grow tent with no signal. When you are back online and signed in, it syncs to the cloud and to your other devices.</p>
+      <p>Yes. Everything is kept on the phone first, so you can log, scan and print in a basement or a grow tent with no signal. If you use the cloud, it syncs when you are back online.</p>
     </details>
     <details>
-      <summary>Who owns my records?</summary>
-      <p>You do. Settings holds an export to Excel and a full backup file, and you can take either whenever you like. Synced data is stored in the EU (Ireland). We never sell data, show ads or track you across other apps.</p>
+      <summary>Where is my data kept?</summary>
+      <p>You choose in Settings, Privacy &amp; security: only on the phone, on the phone and in the cloud (stored in the EU, Ireland), or on the phone with an encrypted cloud backup that only your passphrase or recovery key can open. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+    </details>
+    <details>
+      <summary>What does it cost?</summary>
+      <p>Spora is free during early access. If that changes, you will hear about it in the app well before, and exporting all your records to Excel stays free either way.</p>
+    </details>
+    <details>
+      <summary>When is it coming to iPhone?</summary>
+      <p>Soon. Send a short email with the subject "Spora iPhone" and you will hear from us the day it is on the App Store. Nothing else, and no list to leave.</p>
+    </details>
+    <details>
+      <summary>Does a sector mean a pure culture?</summary>
+      <p>No, and Spora never says so. A colony or sector is recorded as a place on a plate with what you saw. A daughter culture taken from it is a candidate isolate, and stays one until you record real evidence. Fast growth or a rhizomorphic look is noted, not treated as proof.</p>
+    </details>
+    <details>
+      <summary>Which label printers?</summary>
+      <p>Small Bluetooth label printers print straight from the phone, down to 30 by 20 millimetres. Spora is tested on the Phomemo M221 and also speaks to NIIMBOT printers. For any other printer, print an A4 sheet of labels from a PDF.</p>
+    </details>
+    <details>
+      <summary>Do I need labels to log a harvest?</summary>
+      <p>No. Scan a label if you have one, or pick the batch from a list when the code is written on the jar or bag with a marker.</p>
+    </details>
+    <details>
+      <summary>Coming from another app or a spreadsheet?</summary>
+      <p>Bring your records with you. Export them from your old grow app or save your spreadsheet as CSV or Excel, and Spora rebuilds your strains, batches, lineage and harvests. You see everything before it is saved, and you can undo the import.</p>
+    </details>
+    <details>
+      <summary>Which languages?</summary>
+      <p>English, Norwegian, Swedish, Danish, German, Spanish, French, Italian, Polish and Russian. The app follows your phone's language, and you can change it in Settings.</p>
     </details>
     <details>
       <summary>Can I delete my account?</summary>
       <p>Yes, from inside the app under Settings, and it takes effect straight away. If you cannot open the app, email us and we delete it within 30 days. <a href="delete.html">What gets removed</a>.</p>
-    </details>
-    <details>
-      <summary>What does it cost?</summary>
-      <p>Nothing while in early access. There will always be a free plan; paid plans for bigger farms come later, and you will hear about them before anything changes. Your data stays exportable either way.</p>
-    </details>
-    <details>
-      <summary>When is it coming to iPhone?</summary>
-      <p>It is being built. Send a short email with the subject "Spora iPhone" and you will hear from us the day it is on the App Store. Nothing else, and no list to leave.</p>
-    </details>
-    <details>
-      <summary>Which languages?</summary>
-      <p>English, Norwegian, Polish, German and Spanish. The app follows your phone's language, and you can change it in Settings.</p>
-    </details>
-    <details>
-      <summary>Which label printers?</summary>
-      <p>Phomemo Bluetooth label printers such as the M110, M220 and M221 print straight from the phone, down to 30 by 20 millimetres, one label or a whole tray at once. More models, including Niimbot, are being tested. For any other printer, export an A4 sheet as a PDF.</p>
-    </details>
-    <details>
-      <summary>Coming from another app or a spreadsheet?</summary>
-      <p>Bring your records with you. Export them from your old grow app or save your spreadsheet as CSV or Excel, and Spora rebuilds your strains, batches, lineage and harvests. You see everything before it is saved, and you can undo the import for a week.</p>
-    </details>
-    <details>
-      <summary>Is it complicated?</summary>
-      <p>Only if you want it to be. When you start, you choose Simple or Full. Simple shows what to do today, your grows in plain words and three big buttons on each batch. Full adds lineage codes, the lab, analytics, deliveries and scanning. Switch any time in Settings; nothing is deleted.</p>
-    </details>
-    <details>
-      <summary>Is it only for farms?</summary>
-      <p>No. A tent with six jars gets the same lineage, contamination log and weekly plan as a grow room with six hundred. The orders and cold-room parts only matter once you sell.</p>
     </details>
     </div>
   </div>
@@ -270,8 +371,8 @@
 <section class="closing">
   <div class="wrap">
     <h2>Keep the log on your phone.</h2>
-    <p>Write a line about what you grow and we will send the invite.</p>
-    <a class="btn btn-light" href="mailto:hello@getspora.app?subject=Spora%20early%20access&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Spora.%0A%0AI%20grow%3A%20%0AMy%20setup%20(tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Ask for an invite</a>
+    <p>Write a line about what you grow and we will add you to the Android test.</p>
+    <a class="btn btn-light" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
     <p class="closing-mail"><a href="mailto:hello@getspora.app">hello@getspora.app</a></p>
   </div>
 </section>
@@ -287,7 +388,7 @@
       <a href="delete.html">Delete account</a>
       <a href="mailto:hello@getspora.app">hello@getspora.app</a>
     </nav>
-    <p>Made in Oslo by Hubert Burton.</p>
+    <p>Built by a grower in Oslo.</p>
   </div>
 </footer>
 </body>
