@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spora: the mushroom grow log, from spore to harvest</title>
-<meta name="description" content="Spora is a grow log for mushroom growers, from a first kit to a small farm with staff. Lineage and family tree, colony and sector isolation, QR labels and scanning, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
+<meta name="description" content="Spora is a grow log for mushroom growers, from a first kit to a small farm with staff. Lineage and family tree, a plate map for colonies and sectors, step-by-step guides with photos, QR labels and scanning, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <link rel="canonical" href="https://getspora.app/">
 <meta name="theme-color" content="#FAF5EA">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spora">
 <meta property="og:title" content="Spora: the mushroom grow log, from spore to harvest">
-<meta property="og:description" content="Lineage and family tree, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
+<meta property="og:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <meta property="og:url" content="https://getspora.app/">
 <meta property="og:image" content="https://getspora.app/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Spora: the mushroom grow log, from spore to harvest">
-<meta name="twitter:description" content="Lineage and family tree, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
+<meta name="twitter:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free during early access on Android.">
 <meta name="twitter:image" content="https://getspora.app/og.jpg">
 <link rel="icon" href="favicon.png" sizes="64x64" type="image/png">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -31,7 +31,7 @@
 <link rel="stylesheet" href="site.css">
 <link rel="preload" as="image" href="img/screen-home.webp">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spora","applicationCategory":"BusinessApplication","operatingSystem":"Android","url":"https://getspora.app/","description":"A grow log for mushroom growers: lineage, colony isolation, QR labels, harvests, restaurant orders and a team log. Works offline.","inLanguage":["en","nb","sv","da","de","es","fr","it","pl","ru"]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spora","applicationCategory":"BusinessApplication","operatingSystem":"Android","url":"https://getspora.app/","description":"A grow log for mushroom growers: lineage, a plate map for colony and sector isolation, step-by-step guides, QR labels, harvests, restaurant orders and a team log. Works offline.","inLanguage":["en","nb","sv","da","de","es","fr","it","pl","ru"]}
 </script>
 </head>
 <body>
@@ -55,6 +55,7 @@
     <nav class="top-nav" aria-label="Sections">
       <a href="#who">Who it's for</a>
       <a href="#features">What it does</a>
+      <a href="#genetics">Genetics</a>
       <a href="#farm">For farms</a>
       <a href="#data">Your data</a>
       <a href="#faq">Questions</a>
@@ -101,7 +102,7 @@
       <li>
         <img src="img/stage-agar.webp" width="600" height="600" alt="An agar plate with white mycelium growing out from the centre." loading="lazy">
         <h3>Serious hobby growers</h3>
-        <p>Plates, liquid culture, grain and bulk with every parent recorded. Colonies and sectors, transfer counts, contamination with the cause, and the numbers to compare strains and recipes.</p>
+        <p>Plates, liquid culture, grain and bulk with every parent recorded. Colonies and sectors marked on a photo of the plate, transfer counts, contamination with the cause, and the numbers to compare branches and recipes.</p>
       </li>
       <li>
         <img src="img/farm-shelves.webp" width="640" height="794" alt="A metal rack holding three shelves of substrate bags." loading="lazy">
@@ -134,20 +135,6 @@
     </article>
 
     <article class="row row-flip">
-      <div class="row-text">
-        <h3>Colonies and sectors, written down.</h3>
-        <p>Started from a spore swab or print? Mark colony A, B and C on the plate with what you saw, and take a daughter culture from the one you want. It becomes a candidate isolate with its own branch: MYC-076-A, then A-T1, A-T2 for each agar transfer.</p>
-        <p class="row-aside">Careful by design: a sector is a place on a plate, not proof of a new genotype. Transfers count as T, and the F-generation is never raised by a routine transfer.</p>
-      </div>
-      <div class="row-media panel">
-        <figure class="phone">
-          <div class="screen"><span class="bar" aria-hidden="true"><b>9:41</b><svg width="54" height="14"><use href="#sb-right"/></svg></span>
-          <img src="img/screen-plate.webp" width="720" height="1513" alt="An agar plate record with four marked regions: colonies A and B transferred, colony C and sector D under observation, and a Create daughter culture button." loading="lazy"></div>
-        </figure>
-      </div>
-    </article>
-
-    <article class="row">
       <div class="row-text">
         <h3>Colonisation, logged.</h3>
         <p>Log how far the mycelium has spread and the picture follows, step by step. Health, the next check and the expected ready date sit on the same page. Jars from one batch share a row, so a shelf of fifty stays readable.</p>
@@ -188,7 +175,7 @@
       </article>
     </div>
 
-    <article class="row row-flip row-after-pair">
+    <article class="row row-after-pair">
       <div class="row-text">
         <h3>Your week, laid out.</h3>
         <p>What to inoculate, move, check or harvest, and on which day. The planner works back from the harvest date through agar, liquid culture, grain and bulk. Add your own tasks and get one reminder in the morning.</p>
@@ -200,6 +187,63 @@
         </figure>
       </div>
     </article>
+  </div>
+</section>
+
+<section id="genetics" class="genetics">
+  <div class="wrap">
+    <header class="section-head">
+      <h2>Genetics, marked on the plate.</h2>
+      <p>From a spore swab to a culture that grows evenly. Mark what you see on a photo of the dish, take daughters from it, and let your own records tell the branches apart.</p>
+    </header>
+
+    <article class="row">
+      <div class="row-text">
+        <h3>Draw on the photo of your plate.</h3>
+        <p>Hold the dish inside the guide circle and Spora crops and centres the picture. Draw each colony as a circle and each sector as a dashed wedge. A sector sits inside its colony, and Spora suggests which one from the overlap. Every region has its own colour, and the outlines hide with one tap when you want to look at the mycelium.</p>
+        <p>Letters start at A on every plate, and the code carries the plate: colony A on <span class="code">MYC-080-P04</span> is <span class="code">MYC-080-P04A</span>, and its first transfer <span class="code">MYC-080-P04A-T1</span>.</p>
+        <ul class="plates" aria-label="How colonies and sectors are marked">
+          <li><figure><img src="img/plate-colonies.webp" width="440" height="440" alt="A multispore agar plate with six separate colonies, each circled in its own colour and lettered A to F." loading="lazy"><figcaption>Colonies, each a circle<i>Illustration</i></figcaption></figure></li>
+          <li><figure><img src="img/plate-sector.webp" width="440" height="440" alt="One colony circled as A, with a brighter, stranded wedge inside it outlined with a dashed line and labelled A then B." loading="lazy"><figcaption>A sector inside colony A<i>Illustration</i></figcaption></figure></li>
+        </ul>
+        <p class="row-aside">Careful by design: a colony or sector is a place on a plate and what you saw there. A daughter taken from it is a candidate isolate, not proof of a pure or better genotype.</p>
+      </div>
+      <div class="row-media panel row-media-tall row-media-plate">
+        <figure class="phone">
+          <div class="screen">
+          <img src="img/screen-plate-map.webp" width="720" height="1513" alt="The plate map for MYC-077-P01: colony A drawn as a blue circle on the photo of the dish and a sector, A then B, drawn as a dashed orange wedge inside it, with Colony, Sector, Undo and Done buttons." loading="lazy"></div>
+        </figure>
+      </div>
+    </article>
+
+    <div class="pair">
+      <article class="card">
+        <div class="card-text">
+          <h3>Plates from A, B and C at once.</h3>
+          <p>Choose how many plates or slants to take from each colony or sector. Spora makes them in one step, gives each its code and its own candidate branch, and the labels are ready to print.</p>
+        </div>
+        <figure class="phone phone-crop">
+          <div class="screen">
+          <img src="img/screen-make-plates.webp" width="720" height="1513" alt="Make plates from A, B, C: two plates from colony A, one from colony B and one from sector C, each with its new code, on plates or slants, and a Make 4 plates button." loading="lazy"></div>
+        </figure>
+      </article>
+      <article class="card">
+        <div class="card-text">
+          <h3>Branches, side by side.</h3>
+          <p>Two to four branches from the same source, side by side: days to colonise, contamination, yield and biological efficiency. Every number shows how many batches it rests on, and nothing is estimated.</p>
+        </div>
+        <figure class="phone phone-crop">
+          <div class="screen">
+          <img src="img/screen-compare.webp" width="720" height="1513" alt="Compare branches MYC-076-A and MYC-076-B: days to cover the plate, colonisation days and contamination, each value with its sample size, n equals 2 or more, and Not tested where there is no record." loading="lazy"></div>
+        </figure>
+      </article>
+    </div>
+
+    <dl class="lab-more">
+      <div><dt>Photo history</dt><dd>Every photo of a plate by day, tied to the colony or sector it shows. Put any two side by side to see what changed.</dd></div>
+      <div><dt>Transfers counted, not guessed</dt><dd>T counts agar transfers and G counts grain to grain. The F-generation is never changed by a transfer; you set it when there is a documented cross.</dd></div>
+      <div><dt>Your own codes</dt><dd>Write the code from your marker pen next to the permanent one on any plate, jar or bag, and search by either.</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -225,9 +269,10 @@
     <article class="row">
       <div class="row-text">
         <h2>For farms that deliver every week.</h2>
-        <p>Your restaurants and what each orders every week, set against what is ready in the cold room. Two weeks of deliveries, packed oldest first, so you see what is short before the day comes.</p>
+        <p>Your restaurants and what each orders every week, in kilos per mushroom with prices from your price list, set against what is ready in the cold room. Two weeks of deliveries, packed oldest first, so you see what is short before the day comes.</p>
         <dl class="farm-list">
-          <div><dt>Harvest by scan or from the list</dt><dd>Scan the label and weigh, or pick the batch from a list when the code is written on the jar. A harvest session weighs a whole room on a big number pad.</dd></div>
+          <div><dt>A page for each restaurant</dt><dd>Contact details, the weekly order by day, what is coming up, the last deliveries and open invoices, on one page.</dd></div>
+          <div><dt>Harvest by scan or from the list</dt><dd>Scan the label and weigh. No label? Pick the batch from a list or type the code written on the jar. A harvest session weighs a whole room on a big number pad.</dd></div>
           <div><dt>Cold room and stock</dt><dd>Picked lots, oldest first, with days left. Deliveries take from it and the ledger keeps up.</dd></div>
           <div><dt>Cost per kilo</dt><dd>Materials, energy and labour per batch, rolled up into the cost per kilo by strain and recipe.</dd></div>
           <div><dt>Invoices and delivery notes</dt><dd>Bill a restaurant for what went out, VAT per line, as a PDF, and mark it paid. Export the sales for your accounts.</dd></div>
@@ -259,11 +304,17 @@
 <section id="start" class="beginner">
   <div class="wrap">
     <div class="farm-grid farm-grid-flip">
-      <img class="farm-photo" src="img/hero-king-bag.webp" width="1280" height="720" alt="King oyster mushrooms pinning from a substrate bag with a blank label." loading="lazy">
+      <div class="guides-media" role="img" aria-label="The Guides screen in Spora, with a guide step from Grain jars: a photo of grain rinsed in a sieve under the tap, then step 1, Rinse and soak.">
+        <figure class="phone">
+          <div class="screen"><img src="img/screen-guides.webp" width="720" height="1513" alt="" loading="lazy"></div>
+        </figure>
+        <img class="guide-card" src="img/guide-step.webp" width="560" height="726" alt="" loading="lazy">
+      </div>
       <div class="farm-text">
         <h2>Starting with one kit?</h2>
         <p>Choose Simple when you start. You get what to do today, your grows in plain words such as Growing well or Ready to pick, and three big buttons on each one.</p>
-        <p>Short guides cover fruiting conditions, grain jars, inoculation, pouring agar and the monotub. The contamination guide shows what trouble looks like, why it happens and what to do. Add more when you are ready; Full mode is one switch away.</p>
+        <p>Step-by-step guides show a photo for every step: fruiting conditions, grain jars, inoculation, pouring agar, the monotub, isolating genetics from spores and how to mark a plate. The contamination guide shows what trouble looks like, why it happens and what to do.</p>
+        <p>Add more when you are ready; Full mode is one switch away.</p>
       </div>
     </div>
   </div>
@@ -282,7 +333,7 @@
     </ul>
     <dl class="lab-more">
       <div><dt>Export to Excel, always free</dt><dd>Every table, whenever you like, plus a full backup file you can restore. Delete your account from inside the app.</dd></div>
-      <div><dt>Ten languages</dt><dd>English, Norsk, Svenska, Dansk, Deutsch, Español, Français, Italiano, Polski and Русский. Spora follows your phone, or pick one on the first screen.</dd></div>
+      <div><dt>Ten languages</dt><dd>English, Norsk, Svenska, Dansk, Deutsch, Español, Français, Italiano, Polski and Русский. Choose yours on the very first screen, before anything else, and change it in Settings at any time.</dd></div>
       <div><dt>No ads, nothing sold</dt><dd>No advertising and no data brokers. Anonymous usage data and crash reports help us fix problems, and one switch turns them off.</dd></div>
     </dl>
   </div>
@@ -341,8 +392,12 @@
       <p>Soon. Send a short email with the subject "Spora iPhone" and you will hear from us the day it is on the App Store. Nothing else, and no list to leave.</p>
     </details>
     <details>
+      <summary>Can I mark sectors on a photo of my plate?</summary>
+      <p>Yes. Take the photo with the dish inside the guide circle, or use one you already have. Draw colonies as circles and sectors as dashed wedges, and Spora suggests which colony a sector sits in. The marks stay in place on any phone. Prefer no photo? List the regions by letter instead.</p>
+    </details>
+    <details>
       <summary>Does a sector mean a pure culture?</summary>
-      <p>No, and Spora never says so. A colony or sector is recorded as a place on a plate with what you saw. A daughter culture taken from it is a candidate isolate, and stays one until you record real evidence. Fast growth or a rhizomorphic look is noted, not treated as proof.</p>
+      <p>No, and Spora never says so. A colony or sector is recorded as a place on a plate with what you saw. A daughter culture taken from it is a candidate isolate, and stays one until you record real evidence. Branch comparisons show only what was recorded, with the number of batches behind each figure. Fast growth or a rhizomorphic look is noted, not treated as proof.</p>
     </details>
     <details>
       <summary>Which label printers?</summary>
@@ -350,7 +405,7 @@
     </details>
     <details>
       <summary>Do I need labels to log a harvest?</summary>
-      <p>No. Scan a label if you have one, or pick the batch from a list when the code is written on the jar or bag with a marker.</p>
+      <p>No. Scan a label if you have one. Otherwise pick the batch from a list, or type the code you wrote on the jar or bag with a marker.</p>
     </details>
     <details>
       <summary>Coming from another app or a spreadsheet?</summary>
@@ -358,7 +413,7 @@
     </details>
     <details>
       <summary>Which languages?</summary>
-      <p>English, Norwegian, Swedish, Danish, German, Spanish, French, Italian, Polish and Russian. The app follows your phone's language, and you can change it in Settings.</p>
+      <p>English, Norwegian, Swedish, Danish, German, Spanish, French, Italian, Polish and Russian. You choose one on the very first screen when you open Spora, and you can change it in Settings later.</p>
     </details>
     <details>
       <summary>Can I delete my account?</summary>
