@@ -244,9 +244,10 @@ p{margin:0}
   .top-row{height:60px}
   .hero{padding-top:44px}
   .hero .actions{margin-top:28px}
-  .stage{aspect-ratio:auto;height:460px;margin-top:40px;border-radius:22px}
+  h1{font-size:clamp(40px,11.5vw,48px)}
+  .stage{aspect-ratio:auto;height:520px;margin-top:40px;border-radius:22px}
   .stage-photo{left:0;width:100%;object-position:72% 45%}
-  .phone-hero{--pw:min(215px,55vw);left:calc(95% - var(--pw));bottom:-24%}
+  .phone-hero{--pw:min(250px,66vw);left:calc(96% - var(--pw));bottom:-12%}
   .features,.farm{padding-top:96px}
   .lab,.access{padding-top:84px}
   .faq{padding-top:76px}
@@ -254,8 +255,8 @@ p{margin:0}
   .row{grid-template-columns:1fr;gap:28px;margin-bottom:72px}
   .row-flip .row-text{order:0}
   .row-text{padding-top:0}
-  .row-media{height:440px;padding:28px 24px 0;border-radius:22px}
-  .row-media .phone{--pw:min(260px,72vw)}
+  .row-media{height:480px;padding:28px 20px 0;border-radius:22px}
+  .row-media .phone{--pw:min(280px,78vw)}
   .pair{grid-template-columns:1fr;gap:20px}
   .card{min-height:0;padding:28px 24px 0;border-radius:22px}
   .card .phone-crop{--pw:min(260px,72vw);margin-top:28px;margin-bottom:-30%}
