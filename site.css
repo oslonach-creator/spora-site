@@ -351,3 +351,4 @@ p{margin:0}
 .signup:not([hidden]) ~ .signup-alt .link-quiet{font-size:14px}
 @media (max-width:560px){.signup{padding:18px;border-radius:16px}.signup .btn{justify-self:stretch}}
 .signup-status:empty{display:none}
+.farm-sec .row-text > p.farm-intro{color:var(--ink)}
