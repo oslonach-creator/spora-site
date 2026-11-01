@@ -60,7 +60,7 @@
       <a href="#data">Your data</a>
       <a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn-small" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the test</a>
+    <a class="btn btn-small" href="#access">Join the test</a>
   </div>
 </header>
 
@@ -71,8 +71,8 @@
     <h1>The grow log for mushroom growers.</h1>
     <p class="lede">Every culture, jar and bag from spore to harvest, where it came from and what it needs today. For a first kit on the kitchen counter, a shelf of plates, or a small farm with staff. Works offline in the grow room.</p>
     <div class="actions">
-      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
-      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone&amp;body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone." title="Email us and we will tell you the day it is on the App Store">iPhone: in App Store review</a>
+      <a class="btn" href="#access">Join the Android test</a>
+      <a class="link-quiet" href="#access" title="Leave your email and we will tell you the day it is on the App Store">iPhone: in App Store review</a>
     </div>
     <p class="fine">Free to download, every feature free during early access. No ads, no card. In English and nine more languages. Follow along on <a href="https://www.instagram.com/sporagrow/">Instagram</a>.</p>
   </div>
@@ -370,12 +370,28 @@
       <p>Spora is in early access on Android, as a closed test on Google Play, and in review on the App Store for iPhone. It's free to download, and every feature is free while we test, from one kit to a full grow room.</p>
     </header>
     <dl class="steps">
-      <div><dt>Write to us</dt><dd>Send a short email: what you grow, and the Gmail address on your Android phone.</dd></div>
+      <div><dt>Leave your email</dt><dd>The Gmail address on your Android phone, and what you grow if you like. The form below or a short email both work.</dd></div>
       <div><dt>Get the link</dt><dd>We add you to the test and send a Google Play link. Spora installs like any other app, and updates arrive the same way.</dd></div>
       <div><dt>Grow as usual</dt><dd>Add your first kit, strain or batch and keep the log for a few weeks. Help &amp; feedback in the app reaches us directly.</dd></div>
     </dl>
-    <div class="actions">
-      <a class="btn" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
+    <form id="signup" class="signup" hidden novalidate>
+      <fieldset class="signup-platform">
+        <legend>I want</legend>
+        <label><input type="radio" name="platform" value="android" checked> the Android test</label>
+        <label><input type="radio" name="platform" value="iphone"> an email when it's on iPhone</label>
+      </fieldset>
+      <label class="signup-field"><span data-email-label>Gmail address on your Android phone</span>
+        <input type="email" name="email" autocomplete="email" inputmode="email" required maxlength="254"></label>
+      <label class="signup-field"><span>What do you grow? <i>Optional</i></span>
+        <input type="text" name="grows" maxlength="300" placeholder="Oyster kits, agar and grain, a small farm…"></label>
+      <label class="signup-hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      <label class="signup-consent"><input type="checkbox" name="consent" required>
+        <span>You may email me about the Spora test or the iPhone launch. Nothing else, and you delete it when I ask. <a href="privacy.html#website">Privacy</a></span></label>
+      <button class="btn" type="submit">Send</button>
+      <p class="signup-status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="actions signup-alt">
+      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Or email us to join the Android test</a>
       <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20iPhone&amp;body=Please%20tell%20me%20when%20Spora%20is%20on%20iPhone.">iPhone: tell me when it's ready</a>
     </div>
     <p class="fine">No ads and no card. Your records are yours to export at any time. <span class="mail">hello@getspora.app</span></p>
@@ -438,7 +454,7 @@
   <div class="wrap">
     <h2>Keep the log on your phone.</h2>
     <p>Write a line about what you grow and we will add you to the Android test.</p>
-    <a class="btn btn-light" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Join the Android test</a>
+    <a class="btn btn-light" href="#access">Join the Android test</a>
     <p class="closing-mail"><a href="mailto:hello@getspora.app">hello@getspora.app</a></p>
   </div>
 </section>
@@ -458,5 +474,6 @@
     <p>Built by a grower in Oslo.</p>
   </div>
 </footer>
+<script src="signup.js" defer></script>
 </body>
 </html>
