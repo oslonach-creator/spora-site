@@ -330,3 +330,24 @@ p{margin:0}
   .guides-media .phone{--pw:min(230px,60vw)}
   .guide-card{left:16px;bottom:28px;width:min(170px,44vw);border-radius:10px}
 }
+
+/* Signup form (signup.js). Hidden without JavaScript; the email links stay as fallback. */
+.signup{display:grid;gap:16px;max-width:520px;margin:8px 0 22px;padding:24px;background:var(--cream-deep);border-radius:20px}
+.signup-platform{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.signup-platform legend{font-weight:600;margin-bottom:8px;padding:0}
+.signup-platform label{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+.signup-field{display:grid;gap:6px;font-weight:600;font-size:15px}
+.signup-field i{font-style:normal;font-weight:400;color:var(--ink-faint)}
+.signup-field input{font:16px var(--sans);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;min-height:48px;width:100%;box-sizing:border-box}
+.signup-field input:focus{outline:3px solid var(--green);outline-offset:1px;border-color:transparent}
+.signup-consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-soft);line-height:1.5}
+.signup-consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--green)}
+.signup input[type=radio]{width:18px;height:18px;accent-color:var(--green)}
+.signup .btn{justify-self:start;border:0;cursor:pointer;font-family:var(--sans)}
+.signup .btn:disabled{opacity:.6;cursor:wait}
+.signup-status{margin:0;font-size:15px;min-height:1.5em;color:#8A2D1B}
+.signup-status.is-ok{color:var(--green);font-weight:600}
+.signup-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.signup:not([hidden]) ~ .signup-alt .link-quiet{font-size:14px}
+@media (max-width:560px){.signup{padding:18px;border-radius:16px}.signup .btn{justify-self:stretch}}
+.signup-status:empty{display:none}
