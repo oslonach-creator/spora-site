@@ -16,8 +16,12 @@
     return out || null;
   }
   var q = new URLSearchParams(location.search);
+  // Instagram's own bio link arrives as ?utm_source=ig&utm_content=link_in_bio with no campaign,
+  // whatever is typed in the bio field. Count it as campaign "ig-bio" so bio visits are attributed.
+  var igBio = !q.get('c') && !q.get('utm_campaign') && (q.get('utm_source') || '').toLowerCase() === 'ig' &&
+    (q.get('utm_content') || '').toLowerCase() === 'link_in_bio';
   var ctx = {
-    campaign: clean(q.get('c') || q.get('utm_campaign')),
+    campaign: clean(q.get('c') || q.get('utm_campaign') || (igBio ? 'ig-bio' : null)),
     source: clean(q.get('utm_source') || (q.get('c') && /^ig-/.test(q.get('c').toLowerCase()) ? 'instagram' : null), true),
     medium: clean(q.get('utm_medium'), true),
     lang: ((navigator.language || '').slice(0, 2).toLowerCase().match(/^[a-z]{2}$/) || [null])[0],
