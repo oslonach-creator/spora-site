@@ -1,4 +1,5 @@
-/* Spora site: cookieless campaign counting + the "tell me when it's on Google Play" signup.
+/* Spora site: cookieless campaign counting. The signup part only runs on a page that has a
+   #signup form; the home page has none since Android went live.
    No cookies, no localStorage, no visitor ID, no IP stored by us.
    Counts one "visit" per page load and one "form_start" per page load, with the campaign code
    from ?c= or ?utm_campaign=, a 2-letter language and a device class. Honours Do Not Track / GPC

@@ -454,3 +454,16 @@ p{margin:0}
 .get-card .stores{margin-top:22px}
 .closing .stores{justify-content:center;margin-top:34px}
 @media (max-width:420px){.store img{height:50px}}
+
+/* Android live: both badges, and what is new in the Android release */
+.hero .stores{justify-content:center;margin-top:34px}
+.access .stores{margin-bottom:22px}
+.news{margin-top:72px;padding:44px 48px 48px;border-radius:28px;background:var(--cream-deep);scroll-margin-top:96px}
+.news-head p{margin-top:10px;color:var(--ink-soft);font-size:17px;max-width:34em}
+.news-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:36px 0 0}
+.news-list div{margin:0;padding-top:20px;border-top:1px solid rgba(27,31,26,.14)}
+.news-list dt{font-weight:600;font-size:16px}
+.news-list dd{margin:8px 0 0;color:var(--ink-soft);font-size:15px}
+@media (max-width:1000px){.news{padding:36px 32px 40px}.news-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}}
+@media (max-width:780px){.hero .stores{margin-top:28px}.news{margin-top:56px;padding:28px 22px 32px;border-radius:22px}.news-list{grid-template-columns:1fr;gap:20px;margin-top:28px}}
+@media (max-width:420px){.hero .stores .store img,.closing .stores .store img{height:46px}}
