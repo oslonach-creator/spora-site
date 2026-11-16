@@ -171,10 +171,6 @@ p{margin:0}
 
 /* Access */
 .access{padding:136px 0 0}
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:0 0 48px}
-.steps div{margin:0;padding-top:20px;border-top:1px solid var(--line)}
-.steps dt{font-weight:600;font-size:17px}
-.steps dd{margin:8px 0 0;color:var(--ink-soft);font-size:15px}
 .access .fine{margin-top:18px}
 .access .fine .mail{display:block;margin-top:4px}
 
@@ -273,7 +269,6 @@ p{margin:0}
   .species{gap:12px;margin-top:28px}
   .species img{border-radius:14px}
   .species span{font-size:16px;margin-top:8px}
-  .steps{grid-template-columns:1fr;gap:20px;margin-bottom:36px}
   .access .actions .btn{flex:1 1 100%}
   .closing{margin-top:96px;padding:80px 0}
   .foot nav{margin-left:0}
@@ -352,3 +347,110 @@ p{margin:0}
 @media (max-width:560px){.signup{padding:18px;border-radius:16px}.signup .btn{justify-self:stretch}}
 .signup-status:empty{display:none}
 .farm-sec .row-text > p.farm-intro{color:var(--ink)}
+
+/* ---- v3: interactions (site.js). Every rule below needs a class that site.js adds. ---- */
+
+/* Kit / hobby / farm switch */
+.who-tabs{display:inline-flex;gap:4px;padding:5px;border-radius:999px;background:var(--cream-deep);margin:-28px 0 24px}
+.who-tabs button{font:600 15px/1 var(--sans);color:var(--ink-soft);background:none;border:0;border-radius:999px;padding:0 20px;min-height:44px;cursor:pointer;transition:background .2s ease,color .2s ease}
+.who-tabs button:hover{color:var(--ink)}
+.who-tabs button[aria-selected=true]{background:var(--green);color:#FBF7EE}
+.who-list.is-switch{display:block;border-radius:28px;background:var(--cream-deep);overflow:hidden}
+.who-list.is-switch>li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:56px;align-items:start;height:520px;padding:52px 56px 0}
+.who-list.is-switch>li[hidden]{display:none}
+.who-list.is-switch .who-copy>img{width:148px;border-radius:20px}
+.who-list.is-switch h3{font-size:clamp(28px,2.8vw,36px);margin-top:28px}
+.who-list.is-switch p{font-size:17px;margin-top:14px}
+.who-list.is-switch .phone{--pw:310px;justify-self:center}
+.who-list.is-switch .phone img{border-radius:0;aspect-ratio:720/1513;object-fit:fill}
+@keyframes who-copy{from{opacity:0;transform:translateY(8px)}}
+@keyframes who-phone{from{opacity:0;transform:translateY(28px)}}
+.who-list.is-switch>li.is-in .who-copy{animation:who-copy .4s cubic-bezier(.2,.7,.2,1) both}
+.who-list.is-switch>li.is-in .phone{animation:who-phone .55s cubic-bezier(.2,.7,.2,1) both}
+
+/* Photo slider */
+.scrub{margin-top:28px;max-width:420px}
+.scrub-stage{position:relative;aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--panel)}
+.scrub-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scrub-range{-webkit-appearance:none;appearance:none;display:block;width:100%;height:44px;margin:6px 0 0;background:none;cursor:pointer;--fill:0%}
+.scrub-range::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:linear-gradient(to right,var(--green) var(--fill),rgba(27,31,26,.16) var(--fill))}
+.scrub-range::-moz-range-track{height:4px;border-radius:2px;background:rgba(27,31,26,.16)}
+.scrub-range::-moz-range-progress{height:4px;border-radius:2px;background:var(--green)}
+.scrub-range::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;margin-top:-11px;border-radius:50%;background:var(--green);border:3px solid var(--cream);box-shadow:0 2px 8px rgba(27,31,26,.3)}
+.scrub-range::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--green);border:3px solid var(--cream);box-shadow:0 2px 8px rgba(27,31,26,.3)}
+.scrub-range:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:8px}
+.scrub-marks{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-faint)}
+.scrub-marks span{transition:color .15s ease}
+.scrub-marks .is-on{color:var(--ink);font-weight:600}
+.row-solo .has-scrub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:64px;align-items:center}
+.row-solo .has-scrub .scrub{margin-top:0}
+
+/* Feature tour: one phone that stays while the steps scroll (wide screens only) */
+.tour.is-tour{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:64px;align-items:start;margin-bottom:104px}
+.is-tour .tour-steps{min-width:0}
+.is-tour [data-step]{display:flex;flex-direction:column;justify-content:center;min-height:76vh;margin:0;padding:0;background:none;border-radius:0;overflow:visible}
+.is-tour [data-step]:first-child{justify-content:flex-start;min-height:62vh;padding-top:52px}
+.is-tour .row-text{padding-top:0;order:0}
+.is-tour .row-media,.is-tour .card .phone{display:none}
+.is-tour .pair{display:block;margin:0}
+.is-tour .card-text p{font-size:17px;margin-top:16px;max-width:30em}
+.is-tour .has-scrub{display:block}
+.is-tour .scrub{max-width:300px}
+.tour-stage{position:sticky;top:96px;height:min(680px,calc(100vh - 128px));border-radius:28px;background:var(--cream-deep);overflow:hidden}
+.tour-stage .phone{--pw:340px;margin:44px auto 0;transition:opacity .35s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.tour-screens{display:grid;border-radius:calc(var(--pw)*.137);overflow:hidden;background:#FBF7EE}
+.tour-screens .screen{grid-area:1/1;border-radius:0;opacity:0;transition:opacity .4s ease}
+.tour-screens .screen.is-on{opacity:1}
+.tour-photo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s}
+.tour-photo .scrub{width:100%;max-width:min(440px,calc(100vh - 300px));margin:0}
+.tour-stage.is-photo .phone{opacity:0;transform:translateY(24px)}
+.tour-stage.is-photo .tour-photo{opacity:1;visibility:visible;transition:opacity .35s ease .1s}
+
+/* Scroll reveals */
+.rv{opacity:0;transform:translateY(14px)}
+.rv.rv-in{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+
+/* Get the app */
+.get{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:start;margin-bottom:28px}
+.get-card{background:#FFFDF8;border:1px solid var(--line);border-radius:22px;padding:30px 30px 32px;scroll-margin-top:96px}
+.get-card h3{font-size:26px}
+.get-card>p{margin-top:10px;color:var(--ink-soft);max-width:30em}
+.get-card>.btn{margin-top:22px}
+.get-card .signup{margin:22px 0 14px;max-width:none}
+.closing .closing-alt{margin-top:18px;font-size:15px}
+.closing-alt a{color:#FBF7EE;text-underline-offset:4px;text-decoration-thickness:1px}
+
+@media (max-width:1000px){
+  .who-list.is-switch>li{gap:32px;padding:40px 36px 0;height:480px}
+  .who-list.is-switch .phone{--pw:270px}
+  .row-solo .has-scrub{grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:40px}
+}
+@media (max-width:780px){
+  .who-tabs{display:flex;margin:-12px 0 16px}
+  .who-tabs button{flex:1;padding:0 6px;font-size:14px}
+  .who-list.is-switch{border-radius:22px}
+  .who-list.is-switch>li{grid-template-columns:1fr;gap:28px;height:auto;padding:24px 22px 0}
+  .who-list.is-switch .who-copy{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 16px;align-items:start}
+  .who-list.is-switch .who-copy>img{width:96px;grid-row:span 2;border-radius:16px}
+  .who-list.is-switch h3{font-size:24px;margin-top:0}
+  .who-list.is-switch p{font-size:15.5px;margin-top:0}
+  .who-list.is-switch .phone{--pw:min(250px,68vw);margin-bottom:calc(var(--pw)*-1.05)}
+  .row-solo .has-scrub{display:block}
+  .row-solo .has-scrub .scrub{margin-top:28px}
+  .get{grid-template-columns:1fr}
+  .get-card{padding:24px 22px 26px;border-radius:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  .who-list.is-switch>li.is-in .who-copy,.who-list.is-switch>li.is-in .phone{animation:none}
+  .tour-stage .phone,.tour-screens .screen,.tour-photo,.tour-stage.is-photo .tour-photo,.who-tabs button,.scrub-marks span{transition:none}
+}
+
+/* Store badges (official artwork, img/badge-*.svg). Both are drawn at the same height. */
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+.store{display:inline-block;line-height:0;border-radius:9px;transition:transform .1s ease,opacity .15s ease}
+.store:hover{opacity:.86}
+.store:active{transform:translateY(1px)}
+.store img{height:56px;width:auto;max-width:none}
+.get-card .stores{margin-top:22px}
+.closing .stores{justify-content:center;margin-top:34px}
+@media (max-width:420px){.store img{height:50px}}

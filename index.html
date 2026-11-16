@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spora: the mushroom grow log, from spore to harvest</title>
-<meta name="description" content="Spora is a grow log for mushroom growers, from a first kit to a small farm with staff. Lineage and family tree, a plate map for colonies and sectors, step-by-step guides with photos, QR labels and scanning, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android soon.">
+<meta name="description" content="Spora is a grow log for mushroom growers, from a first kit to a small farm with staff. Lineage and family tree, a plate map for colonies and sectors, step-by-step guides with photos, QR labels and scanning, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android is in Google Play review, a few days away.">
 <link rel="canonical" href="https://getspora.app/">
 <meta name="apple-itunes-app" content="app-id=6827535973">
 <meta name="theme-color" content="#FAF5EA">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spora">
 <meta property="og:title" content="Spora: the mushroom grow log, from spore to harvest">
-<meta property="og:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android soon.">
+<meta property="og:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android is in Google Play review, a few days away.">
 <meta property="og:url" content="https://getspora.app/">
 <meta property="og:image" content="https://getspora.app/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Spora: the mushroom grow log, from spore to harvest">
-<meta name="twitter:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android soon.">
+<meta name="twitter:description" content="Lineage and family tree, a plate map for colonies and sectors, QR labels, harvests, restaurant orders and a team log. Works offline, in 10 languages. Free on the App Store for iPhone. Android is in Google Play review, a few days away.">
 <meta name="twitter:image" content="https://getspora.app/og.jpg">
 <link rel="icon" href="favicon.png" sizes="64x64" type="image/png">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -72,8 +72,8 @@
     <h1>The grow log for mushroom growers.</h1>
     <p class="lede">Every culture, jar and bag from spore to harvest, where it came from and what it needs today. For a first kit on the kitchen counter, a shelf of plates, or a small farm with staff. Works offline in the grow room.</p>
     <div class="actions">
-      <a class="btn" href="https://apps.apple.com/app/id6827535973">Download on the App Store</a>
-      <a class="link-quiet" href="#access">Android: join the test</a>
+      <a class="store" href="https://apps.apple.com/app/id6827535973"><img src="img/badge-app-store.svg" width="120" height="40" alt="Download on the App Store"></a>
+      <a class="link-quiet" href="#android">Android: in Google Play review. Get notified</a>
     </div>
     <p class="fine">Free to download, every feature free during early access. No ads, no card. In English and nine more languages. Follow along on <a href="https://www.instagram.com/sporagrow/">Instagram</a>.</p>
   </div>
@@ -95,17 +95,17 @@
       <p>Spora shows as much as you need. Pick Simple or Full when you start and switch whenever you like; nothing is lost either way.</p>
     </header>
     <ul class="who-list">
-      <li>
+      <li data-tab="A first kit" data-screen="img/screen-guides.webp" data-screen-alt="The Guides screen in Spora, a list of step-by-step guides with a photo for each.">
         <img src="img/stage-fruiting.webp" width="600" height="600" alt="A grow bag with clusters of blue oyster mushrooms." loading="lazy">
         <h3>Starting with a kit</h3>
         <p>Add the kit in front of you and Spora counts the days, tells you when to look and what it should look like, in plain words. Six photo steps take you from opening the box to the first harvest.</p>
       </li>
-      <li>
+      <li data-tab="Hobby grower" data-screen-bar data-screen="img/screen-batches.webp" data-screen-alt="The Batches screen: batch LM-02 is ready to move to bulk substrate, then agar plates and grain jars listed by stage, each with its progress and the date it should be ready.">
         <img src="img/stage-agar.webp" width="600" height="600" alt="An agar plate with white mycelium growing out from the centre." loading="lazy">
         <h3>Serious hobby growers</h3>
         <p>Plates, liquid culture, grain and bulk with every parent recorded. Colonies and sectors marked on a photo of the plate, transfer counts, contamination with the cause, and the numbers to compare branches and recipes.</p>
       </li>
-      <li>
+      <li data-tab="Small farm" data-screen-bar data-screen="img/screen-orders.webp" data-screen-alt="Deliveries for week 43: lion's mane, king oyster and blue oyster each marked covered, then Friday's and Saturday's restaurant orders.">
         <img src="img/farm-shelves.webp" width="640" height="794" alt="A metal rack holding three shelves of substrate bags." loading="lazy">
         <h3>Small farms with staff</h3>
         <p>Labels and a scanner on every shelf, harvests weighed by the crate, weekly restaurant orders, invoices and a recall report. Everyone on the team sees their own day.</p>
@@ -121,7 +121,9 @@
       <p>Agar, liquid culture, grain, bulk and fruiting, in one record that follows the work. The screens below are from the app, shown with a sample farm.</p>
     </header>
 
-    <article class="row">
+    <div class="tour" data-tour>
+    <div class="tour-steps">
+    <article class="row" data-step>
       <div class="row-text">
         <h3>Every batch, back to its source.</h3>
         <p>Each plate, syringe, jar and block gets a permanent code and remembers what it was made from, even when spawn is pooled from several parents. The family tree shows the whole line, and the way back to where it began.</p>
@@ -135,7 +137,7 @@
       </div>
     </article>
 
-    <article class="row row-flip">
+    <article class="row row-flip" data-step>
       <div class="row-text">
         <h3>Colonisation, logged.</h3>
         <p>Log how far the mycelium has spread and the picture follows, step by step. Health, the next check and the expected ready date sit on the same page. Jars from one batch share a row, so a shelf of fifty stays readable.</p>
@@ -153,10 +155,12 @@
       </div>
     </article>
 
-    <article class="row row-solo">
+    <article class="row row-solo" data-step="photo">
       <div class="row-text">
+        <div class="solo-copy">
         <h3>Fruiting, step by step.</h3>
         <p>Log how far the flush has come and the picture moves with it, every five percent: first knots, pins, young caps, ready to pick. Oysters, lion's mane, king oyster, shiitake, chestnut, pioppino, nameko, enoki and button each grow in their own way, and every step has a short tip on what to look for and when to pick. Log harvest appears when the flush is ready.</p>
+        </div>
         <ul class="trio" aria-label="Fruiting pictures, first pins to ready to pick">
           <li><img src="img/fruit-pins.webp" width="600" height="600" alt="A closed grow bag with a small knot of pins on top of the white substrate." loading="lazy"><span>First pins</span></li>
           <li><img src="img/fruit-young.webp" width="600" height="600" alt="The same bag with a cluster of young mushrooms, caps still rounded." loading="lazy"><span>Young caps</span></li>
@@ -165,7 +169,7 @@
       </div>
     </article>
     <div class="pair">
-      <article class="card">
+      <article class="card" data-step>
         <div class="card-text">
           <h3>Labels from a pocket printer.</h3>
           <p>Small QR labels on a cheap Bluetooth printer such as the Phomemo M221 or a NIIMBOT, one label or a whole tray. Any other printer gets an A4 sheet as a PDF.</p>
@@ -175,7 +179,7 @@
           <img src="img/screen-labels.webp" width="720" height="1513" alt="Label settings with a preview of a 30 by 20 millimetre label for blue oyster BO-02, with its QR code." loading="lazy"></div>
         </figure>
       </article>
-      <article class="card">
+      <article class="card" data-step>
         <div class="card-text">
           <h3>One scan, the next step.</h3>
           <p>Scan a label to open the jar, log a check, harvest it or print it again. Walk the day's checks with the scanner, jar after jar, and each one is logged as you go.</p>
@@ -187,7 +191,7 @@
       </article>
     </div>
 
-    <article class="row row-after-pair">
+    <article class="row row-after-pair" data-step>
       <div class="row-text">
         <h3>Your week, laid out.</h3>
         <p>What to inoculate, move, check or harvest, and on which day. The planner works back from the harvest date through agar, liquid culture, grain and bulk. Add your own tasks and get one reminder in the morning.</p>
@@ -199,6 +203,8 @@
         </figure>
       </div>
     </article>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -369,28 +375,33 @@
   <div class="wrap">
     <header class="section-head">
       <h2>Get it while it's new.</h2>
-      <p>Spora is <a href="https://apps.apple.com/app/id6827535973">on the App Store for iPhone</a>. On Android it is in early access, as a closed test on Google Play, and opens to everyone soon. It's free to download, and every feature is free while we test, from one kit to a full grow room.</p>
+      <p>Free to download, and every feature is free during early access, from one kit to a full grow room.</p>
     </header>
-    <dl class="steps">
-      <div><dt>Leave your email</dt><dd>The Gmail address on your Android phone, and what you grow if you like. The form below or a short email both work.</dd></div>
-      <div><dt>Get the link</dt><dd>We add you to the test and send a Google Play link. Spora installs like any other app, and updates arrive the same way.</dd></div>
-      <div><dt>Grow as usual</dt><dd>Add your first kit, strain or batch and keep the log for a few weeks. Help &amp; feedback in the app reaches us directly.</dd></div>
-    </dl>
-    <form id="signup" class="signup" hidden novalidate>
-      <input type="hidden" name="platform" value="android">
-      <label class="signup-field"><span data-email-label>Gmail address on your Android phone</span>
-        <input type="email" name="email" autocomplete="email" inputmode="email" required maxlength="254"></label>
-      <label class="signup-field"><span>What do you grow? <i>Optional</i></span>
-        <input type="text" name="grows" maxlength="300" placeholder="Oyster kits, agar and grain, a small farm…"></label>
-      <label class="signup-hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-      <label class="signup-consent"><input type="checkbox" name="consent" required>
-        <span>You may email me about the Spora test or the iPhone launch. Nothing else, and you delete it when I ask. <a href="privacy.html#website">Privacy</a></span></label>
-      <button class="btn" type="submit">Send</button>
-      <p class="signup-status" role="status" aria-live="polite"></p>
-    </form>
-    <div class="actions signup-alt">
-      <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20Android%20test&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Spora%20test.%0A%0AI%20grow%3A%20%0AMy%20setup%20(kit%2C%20tent%2C%20room%2C%20farm)%3A%20%0AGmail%20on%20my%20Android%20phone%3A%20%0A">Or email us to join the Android test</a>
-      <a class="link-quiet" href="https://apps.apple.com/app/id6827535973">On iPhone? Download it from the App Store</a>
+    <div class="get">
+      <div class="get-card">
+        <h3>iPhone</h3>
+        <p>Spora is on the App Store now.</p>
+        <div class="stores"><a class="store" href="https://apps.apple.com/app/id6827535973"><img src="img/badge-app-store.svg" width="120" height="40" alt="Download on the App Store"></a></div>
+      </div>
+      <div class="get-card" id="android">
+        <h3>Android</h3>
+        <p>Spora is in Google Play review, a few days away. Leave your email and we send you one message the day it is out.</p>
+        <form id="signup" class="signup" hidden novalidate>
+          <input type="hidden" name="platform" value="android">
+          <label class="signup-field"><span>Your email</span>
+            <input type="email" name="email" autocomplete="email" inputmode="email" required maxlength="254"></label>
+          <label class="signup-field"><span>What do you grow? <i>Optional</i></span>
+            <input type="text" name="grows" maxlength="300" placeholder="Oyster kits, agar and grain, a small farm…"></label>
+          <label class="signup-hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="signup-consent"><input type="checkbox" name="consent" required>
+            <span>You may email me when Spora is on Google Play. Nothing else, and you delete it when I ask. <a href="privacy.html#website">Privacy</a></span></label>
+          <button class="btn" type="submit">Tell me when it's out</button>
+          <p class="signup-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="actions signup-alt">
+          <a class="link-quiet" href="mailto:hello@getspora.app?subject=Spora%20on%20Android&amp;body=Hi%2C%20please%20tell%20me%20when%20Spora%20is%20on%20Google%20Play.%0A%0AI%20grow%3A%20%0A">Or email us and we will tell you</a>
+        </div>
+      </div>
     </div>
     <p class="fine">No ads and no card. Your records are yours to export at any time. <span class="mail">hello@getspora.app</span></p>
   </div>
@@ -414,7 +425,7 @@
     </details>
     <details>
       <summary>Is it on iPhone and Android?</summary>
-      <p>On iPhone, yes: <a href="https://apps.apple.com/app/id6827535973">download it from the App Store</a>. On Android, Spora is in a closed test on Google Play and opens to everyone soon. Leave your email above to join the test now.</p>
+      <p>On iPhone, yes: <a href="https://apps.apple.com/app/id6827535973">download it from the App Store</a>. On Android, Spora is in Google Play review, a few days away. <a href="#android">Leave your email</a> and we will tell you the day it is out.</p>
     </details>
     <details>
       <summary>Can I mark sectors on a photo of my plate?</summary>
@@ -451,8 +462,9 @@
 <section class="closing">
   <div class="wrap">
     <h2>Keep the log on your phone.</h2>
-    <p>Free on the App Store. On Android, leave your email and we will add you to the test.</p>
-    <a class="btn btn-light" href="https://apps.apple.com/app/id6827535973">Download on the App Store</a>
+    <p>Free on the App Store. On Android it is in Google Play review, a few days away.</p>
+    <div class="stores"><a class="store" href="https://apps.apple.com/app/id6827535973"><img src="img/badge-app-store.svg" width="120" height="40" alt="Download on the App Store"></a></div>
+    <p class="closing-alt"><a href="#android">Android: get notified</a></p>
     <p class="closing-mail"><a href="mailto:hello@getspora.app">hello@getspora.app</a></p>
   </div>
 </section>
@@ -473,5 +485,6 @@
   </div>
 </footer>
 <script src="signup.js" defer></script>
+<script src="site.js" defer></script>
 </body>
 </html>
