@@ -1,4 +1,5 @@
-/* Spora site: cookieless campaign counting + test signup.
+/* Spora site: cookieless campaign counting. The signup part only runs on a page that has a
+   #signup form; the home page has none since Android went live.
    No cookies, no localStorage, no visitor ID, no IP stored by us.
    Counts one "visit" per page load and one "form_start" per page load, with the campaign code
    from ?c= or ?utm_campaign=, a 2-letter language and a device class. Honours Do Not Track / GPC
@@ -57,14 +58,6 @@
   var started = false;
   form.addEventListener('focusin', function () { if (!started) { started = true; track('form_start'); } });
 
-  var emailLabel = form.querySelector('[data-email-label]');
-  function syncPlatform() {
-    var p = form.platform.value;
-    emailLabel.textContent = p === 'android' ? 'Gmail address on your Android phone' : 'Your email';
-  }
-  form.addEventListener('change', syncPlatform);
-  syncPlatform();
-
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = form.querySelector('button[type=submit]');
@@ -80,10 +73,10 @@
     }).then(function (r) { return r.ok ? r.json() : 'error'; }).then(function (res) {
       btn.disabled = false;
       if (res === 'ok') {
-        form.reset(); syncPlatform();
+        form.reset();
         status.className = 'signup-status is-ok';
         status.textContent = platform === 'android'
-          ? 'Thanks. We will send your Google Play test link to that address.'
+          ? 'Thanks. We will email you the day Spora is on Google Play.'
           : 'Thanks. We will email you the day Spora is on the App Store.';
       } else if (res === 'bad_email') {
         status.textContent = 'That email address does not look right.';
